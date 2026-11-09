@@ -111,7 +111,10 @@
       "assetClass": "stock",
       "price": 677.54,
       "oscillator": 24.9,
-      "arrow": null,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 0
+      },
       "liquidity": null,
       "barTime": "2026-11-09 US live (delayed 15m)"
     },
@@ -122,7 +125,10 @@
       "assetClass": "stock",
       "price": 55.88,
       "oscillator": 20.19,
-      "arrow": null,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 0
+      },
       "liquidity": null,
       "barTime": "2026-11-09 US live (delayed 15m)"
     },
@@ -147,7 +153,10 @@
       "assetClass": "stock",
       "price": 733.98,
       "oscillator": 19.74,
-      "arrow": null,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 0
+      },
       "liquidity": null,
       "barTime": "2026-11-09 US live (delayed 15m)"
     },
@@ -180,7 +189,10 @@
       "assetClass": "stock",
       "price": 58.63,
       "oscillator": 14,
-      "arrow": null,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 0
+      },
       "liquidity": null,
       "barTime": "2026-11-09 US live (delayed 15m)"
     },

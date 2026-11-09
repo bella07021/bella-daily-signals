@@ -111,7 +111,10 @@
       "assetClass": "stock",
       "price": 677.54,
       "oscillator": 24.9,
-      "arrow": null,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 0
+      },
       "liquidity": null,
       "barTime": "2026-11-09 US live (delayed 15m)"
     },
@@ -122,7 +125,10 @@
       "assetClass": "stock",
       "price": 55.88,
       "oscillator": 20.19,
-      "arrow": null,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 0
+      },
       "liquidity": null,
       "barTime": "2026-11-09 US live (delayed 15m)"
     },
@@ -147,7 +153,10 @@
       "assetClass": "stock",
       "price": 733.98,
       "oscillator": 19.74,
-      "arrow": null,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 0
+      },
       "liquidity": null,
       "barTime": "2026-11-09 US live (delayed 15m)"
     },
@@ -180,7 +189,10 @@
       "assetClass": "stock",
       "price": 58.63,
       "oscillator": 14,
-      "arrow": null,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 0
+      },
       "liquidity": null,
       "barTime": "2026-11-09 US live (delayed 15m)"
     },
@@ -232,6 +244,96 @@
   "issues": [],
   "rows": [
     {
+      "symbol": "INTC",
+      "name": "Intel Corporation",
+      "market": "NASDAQ INTC",
+      "assetClass": "stock",
+      "price": 58.63,
+      "oscillator": 14,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 0
+      },
+      "liquidity": null,
+      "barTime": "2026-11-09 US live (delayed 15m)",
+      "result": {
+        "index": 73,
+        "long": 73,
+        "short": 0,
+        "bias": "long",
+        "direction": "long",
+        "tier": "entry",
+        "tierLabel": "推荐进场",
+        "signals": {
+          "oscillator": {
+            "side": "long",
+            "points": 20,
+            "label": "超卖"
+          },
+          "divergence": {
+            "side": "long",
+            "points": 30,
+            "label": "当日底背离",
+            "active": true
+          },
+          "liquidity": {
+            "side": null,
+            "points": 0,
+            "penalty": 0,
+            "label": "无此指标",
+            "available": false
+          }
+        },
+        "capped": true
+      },
+      "reason": "超卖 14.00，当日底背离箭头，缺少流动性确认"
+    },
+    {
+      "symbol": "MU",
+      "name": "Micron",
+      "market": "NASDAQ MU",
+      "assetClass": "stock",
+      "price": 733.98,
+      "oscillator": 19.74,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 0
+      },
+      "liquidity": null,
+      "barTime": "2026-11-09 US live (delayed 15m)",
+      "result": {
+        "index": 73,
+        "long": 73,
+        "short": 0,
+        "bias": "long",
+        "direction": "long",
+        "tier": "entry",
+        "tierLabel": "推荐进场",
+        "signals": {
+          "oscillator": {
+            "side": "long",
+            "points": 20,
+            "label": "超卖"
+          },
+          "divergence": {
+            "side": "long",
+            "points": 30,
+            "label": "当日底背离",
+            "active": true
+          },
+          "liquidity": {
+            "side": null,
+            "points": 0,
+            "penalty": 0,
+            "label": "无此指标",
+            "available": false
+          }
+        },
+        "capped": true
+      },
+      "reason": "超卖 19.74，当日底背离箭头，缺少流动性确认"
+    },
+    {
       "symbol": "SNDK",
       "name": "Sandisk",
       "market": "NASDAQ SNDK",
@@ -277,6 +379,96 @@
       "reason": "超卖 15.39，当日底背离箭头，缺少流动性确认"
     },
     {
+      "symbol": "QQQ",
+      "name": "Invesco QQQ Trust",
+      "market": "US Equities QQQ",
+      "assetClass": "stock",
+      "price": 677.54,
+      "oscillator": 24.9,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 0
+      },
+      "liquidity": null,
+      "barTime": "2026-11-09 US live (delayed 15m)",
+      "result": {
+        "index": 44,
+        "long": 44,
+        "short": 0,
+        "bias": "long",
+        "direction": "long",
+        "tier": "watch",
+        "tierLabel": "观察",
+        "signals": {
+          "oscillator": {
+            "side": null,
+            "points": 0,
+            "label": "中性"
+          },
+          "divergence": {
+            "side": "long",
+            "points": 30,
+            "label": "当日底背离",
+            "active": true
+          },
+          "liquidity": {
+            "side": null,
+            "points": 0,
+            "penalty": 0,
+            "label": "无此指标",
+            "available": false
+          }
+        },
+        "capped": true
+      },
+      "reason": "当日底背离箭头，缺少流动性确认"
+    },
+    {
+      "symbol": "SOXL",
+      "name": "Direxion Daily Semiconductor Bull 3X",
+      "market": "NYSE ARCA SOXL",
+      "assetClass": "stock",
+      "price": 55.88,
+      "oscillator": 20.19,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 0
+      },
+      "liquidity": null,
+      "barTime": "2026-11-09 US live (delayed 15m)",
+      "result": {
+        "index": 44,
+        "long": 44,
+        "short": 0,
+        "bias": "long",
+        "direction": "long",
+        "tier": "watch",
+        "tierLabel": "观察",
+        "signals": {
+          "oscillator": {
+            "side": null,
+            "points": 0,
+            "label": "中性"
+          },
+          "divergence": {
+            "side": "long",
+            "points": 30,
+            "label": "当日底背离",
+            "active": true
+          },
+          "liquidity": {
+            "side": null,
+            "points": 0,
+            "penalty": 0,
+            "label": "无此指标",
+            "available": false
+          }
+        },
+        "capped": true
+      },
+      "reason": "当日底背离箭头，缺少流动性确认"
+    },
+    {
       "symbol": "DOGE",
       "name": "Dogecoin",
       "market": "BINANCE.F DOGEUSDT",
@@ -317,90 +509,6 @@
         "capped": true
       },
       "reason": "超卖 19.49，缺少流动性确认"
-    },
-    {
-      "symbol": "INTC",
-      "name": "Intel Corporation",
-      "market": "NASDAQ INTC",
-      "assetClass": "stock",
-      "price": 58.63,
-      "oscillator": 14,
-      "arrow": null,
-      "liquidity": null,
-      "barTime": "2026-11-09 US live (delayed 15m)",
-      "result": {
-        "index": 29,
-        "long": 29,
-        "short": 0,
-        "bias": "long",
-        "direction": "wait",
-        "tier": "none",
-        "tierLabel": "无信号",
-        "signals": {
-          "oscillator": {
-            "side": "long",
-            "points": 20,
-            "label": "超卖"
-          },
-          "divergence": {
-            "side": null,
-            "points": 0,
-            "label": "无箭头",
-            "active": false
-          },
-          "liquidity": {
-            "side": null,
-            "points": 0,
-            "penalty": 0,
-            "label": "无此指标",
-            "available": false
-          }
-        },
-        "capped": true
-      },
-      "reason": "超卖 14.00，缺少流动性确认"
-    },
-    {
-      "symbol": "MU",
-      "name": "Micron",
-      "market": "NASDAQ MU",
-      "assetClass": "stock",
-      "price": 733.98,
-      "oscillator": 19.74,
-      "arrow": null,
-      "liquidity": null,
-      "barTime": "2026-11-09 US live (delayed 15m)",
-      "result": {
-        "index": 29,
-        "long": 29,
-        "short": 0,
-        "bias": "long",
-        "direction": "wait",
-        "tier": "none",
-        "tierLabel": "无信号",
-        "signals": {
-          "oscillator": {
-            "side": "long",
-            "points": 20,
-            "label": "超卖"
-          },
-          "divergence": {
-            "side": null,
-            "points": 0,
-            "label": "无箭头",
-            "active": false
-          },
-          "liquidity": {
-            "side": null,
-            "points": 0,
-            "penalty": 0,
-            "label": "无此指标",
-            "available": false
-          }
-        },
-        "capped": true
-      },
-      "reason": "超卖 19.74，缺少流动性确认"
     },
     {
       "symbol": "CL",
@@ -788,96 +896,12 @@
       "reason": "三项信号都没有触发，缺少流动性确认"
     },
     {
-      "symbol": "QQQ",
-      "name": "Invesco QQQ Trust",
-      "market": "US Equities QQQ",
-      "assetClass": "stock",
-      "price": 677.54,
-      "oscillator": 24.9,
-      "arrow": null,
-      "liquidity": null,
-      "barTime": "2026-11-09 US live (delayed 15m)",
-      "result": {
-        "index": 0,
-        "long": 0,
-        "short": 0,
-        "bias": "neutral",
-        "direction": "wait",
-        "tier": "none",
-        "tierLabel": "无信号",
-        "signals": {
-          "oscillator": {
-            "side": null,
-            "points": 0,
-            "label": "中性"
-          },
-          "divergence": {
-            "side": null,
-            "points": 0,
-            "label": "无箭头",
-            "active": false
-          },
-          "liquidity": {
-            "side": null,
-            "points": 0,
-            "penalty": 0,
-            "label": "无此指标",
-            "available": false
-          }
-        },
-        "capped": true
-      },
-      "reason": "三项信号都没有触发，缺少流动性确认"
-    },
-    {
       "symbol": "SKHY",
       "name": "SK hynix ADR",
       "market": "NASDAQ SKHY",
       "assetClass": "stock",
       "price": 134.15,
       "oscillator": 32.93,
-      "arrow": null,
-      "liquidity": null,
-      "barTime": "2026-11-09 US live (delayed 15m)",
-      "result": {
-        "index": 0,
-        "long": 0,
-        "short": 0,
-        "bias": "neutral",
-        "direction": "wait",
-        "tier": "none",
-        "tierLabel": "无信号",
-        "signals": {
-          "oscillator": {
-            "side": null,
-            "points": 0,
-            "label": "中性"
-          },
-          "divergence": {
-            "side": null,
-            "points": 0,
-            "label": "无箭头",
-            "active": false
-          },
-          "liquidity": {
-            "side": null,
-            "points": 0,
-            "penalty": 0,
-            "label": "无此指标",
-            "available": false
-          }
-        },
-        "capped": true
-      },
-      "reason": "三项信号都没有触发，缺少流动性确认"
-    },
-    {
-      "symbol": "SOXL",
-      "name": "Direxion Daily Semiconductor Bull 3X",
-      "market": "NYSE ARCA SOXL",
-      "assetClass": "stock",
-      "price": 55.88,
-      "oscillator": 20.19,
       "arrow": null,
       "liquidity": null,
       "barTime": "2026-11-09 US live (delayed 15m)",

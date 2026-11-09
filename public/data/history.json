@@ -112,25 +112,35 @@
   {
     "date": "2026-11-10",
     "values": {
+      "INTC": {
+        "index": 73,
+        "direction": "long",
+        "price": 58.63
+      },
+      "MU": {
+        "index": 73,
+        "direction": "long",
+        "price": 733.98
+      },
       "SNDK": {
         "index": 73,
         "direction": "long",
         "price": 902.5848
       },
+      "QQQ": {
+        "index": 44,
+        "direction": "long",
+        "price": 677.54
+      },
+      "SOXL": {
+        "index": 44,
+        "direction": "long",
+        "price": 55.88
+      },
       "DOGE": {
         "index": 29,
         "direction": "wait",
         "price": 0.0699
-      },
-      "INTC": {
-        "index": 29,
-        "direction": "wait",
-        "price": 58.63
-      },
-      "MU": {
-        "index": 29,
-        "direction": "wait",
-        "price": 733.98
       },
       "CL": {
         "index": 25,
@@ -177,20 +187,10 @@
         "direction": "wait",
         "price": 291.5
       },
-      "QQQ": {
-        "index": 0,
-        "direction": "wait",
-        "price": 677.54
-      },
       "SKHY": {
         "index": 0,
         "direction": "wait",
         "price": 134.15
-      },
-      "SOXL": {
-        "index": 0,
-        "direction": "wait",
-        "price": 55.88
       },
       "USDT.D": {
         "index": 0,
