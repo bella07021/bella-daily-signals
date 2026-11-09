@@ -1,0 +1,107 @@
+{
+  "date": "2026-11-09",
+  "capturedAt": "2026-11-09T16:05:00+08:00",
+  "timeframe": "1D",
+  "source": "OpenMarket shared chart bmhOD7gr",
+  "note": "首版读数在北京时间 16:00 左右读取；加密货币的日线仍在形成，美股使用 11 月 6 日收盘的最新日线。",
+  "symbols": [
+    {
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "market": "BINANCE.F BTCUSDT",
+      "assetClass": "crypto",
+      "price": 73850.5,
+      "oscillator": 25.31,
+      "arrow": null,
+      "liquidity": 12.79,
+      "barTime": "2026-11-09 UTC"
+    },
+    {
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "market": "BINANCE.F ETHUSDT",
+      "assetClass": "crypto",
+      "price": 2091.77,
+      "oscillator": 26.25,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 8,
+        "date": "2026-11-01"
+      },
+      "liquidity": 12.51,
+      "barTime": "2026-11-09 UTC"
+    },
+    {
+      "symbol": "QQQ",
+      "name": "Invesco QQQ Trust",
+      "market": "US Equities QQQ",
+      "assetClass": "stock",
+      "price": 656.1,
+      "oscillator": 19.63,
+      "arrow": null,
+      "liquidity": null,
+      "barTime": "2026-11-06 US close"
+    },
+    {
+      "symbol": "SOXL",
+      "name": "Direxion Daily Semiconductor Bull 3X",
+      "market": "NYSE ARCA SOXL",
+      "assetClass": "stock",
+      "price": 45.97,
+      "oscillator": 17.75,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 4,
+        "date": "2026-11-02"
+      },
+      "liquidity": null,
+      "barTime": "2026-11-06 US close"
+    },
+    {
+      "symbol": "SNDK",
+      "name": "Sandisk",
+      "market": "NASDAQ SNDK",
+      "assetClass": "stock",
+      "price": 835.06,
+      "oscillator": 13.47,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 5,
+        "date": "2026-10-30"
+      },
+      "liquidity": null,
+      "barTime": "2026-11-06 US close"
+    },
+    {
+      "symbol": "MU",
+      "name": "Micron",
+      "market": "NASDAQ MU",
+      "assetClass": "stock",
+      "price": 690,
+      "oscillator": 16.65,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 4,
+        "date": "2026-11-02"
+      },
+      "liquidity": null,
+      "barTime": "2026-11-06 US close"
+    },
+    {
+      "symbol": "SKHY",
+      "name": "SK hynix ADR",
+      "market": "NASDAQ SKHY",
+      "assetClass": "stock",
+      "price": 127.34,
+      "oscillator": 33.48,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 9,
+        "date": "2026-10-26"
+      },
+      "liquidity": null,
+      "barTime": "2026-11-06 US close"
+    }
+  ],
+  "issues": []
+}

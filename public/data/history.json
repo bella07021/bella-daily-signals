@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2026-11-09",
+    "values": {
+      "MU": {
+        "index": 29,
+        "direction": "wait"
+      },
+      "QQQ": {
+        "index": 29,
+        "direction": "wait"
+      },
+      "SNDK": {
+        "index": 29,
+        "direction": "wait"
+      },
+      "SOXL": {
+        "index": 29,
+        "direction": "wait"
+      },
+      "BTC": {
+        "index": 15,
+        "direction": "wait"
+      },
+      "ETH": {
+        "index": 15,
+        "direction": "wait"
+      },
+      "SKHY": {
+        "index": 0,
+        "direction": "wait"
+      }
+    }
+  }
+]
