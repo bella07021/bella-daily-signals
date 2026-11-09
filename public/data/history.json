@@ -2,6 +2,14 @@
   {
     "date": "2026-11-09",
     "values": {
+      "INTC": {
+        "index": 73,
+        "direction": "long"
+      },
+      "GOOGL": {
+        "index": 29,
+        "direction": "wait"
+      },
       "MU": {
         "index": 29,
         "direction": "wait"
@@ -18,6 +26,10 @@
         "index": 29,
         "direction": "wait"
       },
+      "SOL": {
+        "index": 25,
+        "direction": "wait"
+      },
       "BTC": {
         "index": 15,
         "direction": "wait"
@@ -26,7 +38,43 @@
         "index": 15,
         "direction": "wait"
       },
+      "SUI": {
+        "index": 5,
+        "direction": "wait"
+      },
+      "BNB": {
+        "index": 0,
+        "direction": "wait"
+      },
+      "CRCL": {
+        "index": 0,
+        "direction": "wait"
+      },
+      "GOLD": {
+        "index": 0,
+        "direction": "wait"
+      },
+      "HYPE": {
+        "index": 0,
+        "direction": "wait"
+      },
+      "SIL": {
+        "index": 0,
+        "direction": "wait"
+      },
       "SKHY": {
+        "index": 0,
+        "direction": "wait"
+      },
+      "USDT.D": {
+        "index": 0,
+        "direction": "wait"
+      },
+      "XAU/USD": {
+        "index": 0,
+        "direction": "wait"
+      },
+      "ZEC": {
         "index": 0,
         "direction": "wait"
       }
