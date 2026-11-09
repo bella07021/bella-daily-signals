@@ -2,15 +2,35 @@
   {
     "date": "2026-11-09",
     "values": {
+      "SNDK": {
+        "index": 73,
+        "direction": "long",
+        "price": 835.06
+      },
+      "SOL": {
+        "index": 55,
+        "direction": "long",
+        "price": 87.137
+      },
+      "CL": {
+        "index": 29,
+        "direction": "wait",
+        "price": 87.02
+      },
+      "DOGE": {
+        "index": 29,
+        "direction": "wait",
+        "price": 0.0697
+      },
       "GOOGL": {
         "index": 29,
         "direction": "wait",
-        "price": 284.75
+        "price": 284.78
       },
       "INTC": {
         "index": 29,
         "direction": "wait",
-        "price": 56.84
+        "price": 56.28
       },
       "MU": {
         "index": 29,
@@ -22,60 +42,50 @@
         "direction": "wait",
         "price": 656.1
       },
-      "SNDK": {
-        "index": 29,
-        "direction": "wait",
-        "price": 835.06
-      },
       "SOXL": {
         "index": 29,
         "direction": "wait",
         "price": 45.97
       },
-      "SOL": {
-        "index": 25,
-        "direction": "wait",
-        "price": 87.04
-      },
       "BTC": {
         "index": 15,
         "direction": "wait",
-        "price": 73850.5
+        "price": 74427.2
       },
       "ETH": {
         "index": 15,
         "direction": "wait",
-        "price": 2091.77
+        "price": 2120.91
+      },
+      "HYPE": {
+        "index": 15,
+        "direction": "wait",
+        "price": 74.36
+      },
+      "BNB": {
+        "index": 5,
+        "direction": "wait",
+        "price": 684.6
       },
       "SUI": {
         "index": 5,
         "direction": "wait",
-        "price": 0.8295
-      },
-      "BNB": {
-        "index": 0,
-        "direction": "wait",
-        "price": 684.52
+        "price": 0.85
       },
       "CRCL": {
         "index": 0,
         "direction": "wait",
-        "price": 67.39
+        "price": 67.88
       },
       "GOLD": {
         "index": 0,
         "direction": "wait",
-        "price": 37.58
-      },
-      "HYPE": {
-        "index": 0,
-        "direction": "wait",
-        "price": 74.071
+        "price": 37.63
       },
       "SIL": {
         "index": 0,
         "direction": "wait",
-        "price": 78.75
+        "price": 79.36
       },
       "SKHY": {
         "index": 0,
@@ -90,12 +100,12 @@
       "XAU/USD": {
         "index": 0,
         "direction": "wait",
-        "price": 4096.37
+        "price": 4119.17
       },
       "ZEC": {
         "index": 0,
         "direction": "wait",
-        "price": 1229.97
+        "price": 1218.48
       }
     }
   }
