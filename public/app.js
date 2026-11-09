@@ -44,7 +44,7 @@ function arrowText(row) {
 
 function arrowNote(row) {
   if (!row.result.signals.divergence.active) return "只检查最新一根日线";
-  return `${row.arrow.type === "bullish" ? "↑" : "↓"} ${row.arrow.date} · 最新日线`;
+  return `${row.arrow.type === "bullish" ? "↑" : "↓"} 最新日线`;
 }
 
 function filteredRows() {
@@ -226,7 +226,7 @@ function openDetail(symbol) {
     </div>
     <div class="breakdown">
       <div><b>S1</b><span>${escapeHtml(s.oscillator.label)}，主线 ${row.oscillator.toFixed(2)}</span><span class="pts">${s.oscillator.side ? `+${s.oscillator.points}` : "0"}</span></div>
-      <div><b>S2</b><span>${escapeHtml(arrowText(row))}${row.arrow ? `（${escapeHtml(row.arrow.date)}）` : ""}</span><span class="pts">${s.divergence.side ? `+${s.divergence.points}` : "0"}</span></div>
+      <div><b>S2</b><span>${escapeHtml(arrowText(row))}</span><span class="pts">${s.divergence.side ? `+${s.divergence.points}` : "0"}</span></div>
       <div><b>S3</b><span>${escapeHtml(s.liquidity.label)}，读数 ${signedValue(row.liquidity)}</span><span class="pts">${liquidityPoints}</span></div>
       <div><b>结果</b><span>做多 ${result.long} / 做空 ${result.short}${result.capped ? "；缺少 S3，按 80 分上限换算" : ""}<br />${escapeHtml(row.reason)}</span><span class="pts">${result.index}</span></div>
     </div>

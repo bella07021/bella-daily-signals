@@ -134,7 +134,7 @@
       "price": 902.5848,
       "oscillator": 15.39,
       "arrow": {
-        "type": "bearish",
+        "type": "bullish",
         "barsAgo": 0
       },
       "liquidity": null,
@@ -239,19 +239,19 @@
       "price": 902.5848,
       "oscillator": 15.39,
       "arrow": {
-        "type": "bearish",
+        "type": "bullish",
         "barsAgo": 0
       },
       "liquidity": null,
       "barTime": "2026-11-09 US live (delayed 15m)",
       "result": {
-        "index": 44,
-        "long": 29,
-        "short": 44,
-        "bias": "short",
-        "direction": "short",
-        "tier": "watch",
-        "tierLabel": "观察",
+        "index": 73,
+        "long": 73,
+        "short": 0,
+        "bias": "long",
+        "direction": "long",
+        "tier": "entry",
+        "tierLabel": "推荐进场",
         "signals": {
           "oscillator": {
             "side": "long",
@@ -259,9 +259,9 @@
             "label": "超卖"
           },
           "divergence": {
-            "side": "short",
+            "side": "long",
             "points": 30,
-            "label": "当日顶背离",
+            "label": "当日底背离",
             "active": true
           },
           "liquidity": {
@@ -274,7 +274,7 @@
         },
         "capped": true
       },
-      "reason": "超卖 15.39，当日顶背离箭头，缺少流动性确认"
+      "reason": "超卖 15.39，当日底背离箭头，缺少流动性确认"
     },
     {
       "symbol": "DOGE",

@@ -113,8 +113,8 @@
     "date": "2026-11-10",
     "values": {
       "SNDK": {
-        "index": 44,
-        "direction": "short",
+        "index": 73,
+        "direction": "long",
         "price": 902.5848
       },
       "DOGE": {
