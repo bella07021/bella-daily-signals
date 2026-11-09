@@ -3,114 +3,134 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bella 日线信号台</title>
+    <title>Bella Signals // Daily Signal Node</title>
     <meta name="description" content="OpenMarket 收藏列表的日线超买超卖、背离与流动性失衡信号榜。" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=JetBrains+Mono:wght@400;600&family=Noto+Serif+SC:wght@500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/styles.css?v=2" />
   </head>
   <body>
-    <div class="grain" aria-hidden="true"></div>
-    <header class="masthead">
-      <div class="brand">
-        <span class="stamp">1D</span>
-        <div>
-          <p class="eyebrow">OpenMarket favorites · Daily ledger</p>
-          <h1>Bella 日线信号台</h1>
-        </div>
-      </div>
-      <div class="freshness" id="freshness">读取中…</div>
+    <header class="topbar">
+      <a class="brand" href="/">
+        <span class="brand-mark">BS</span>
+        <span class="brand-text">Bella Signals // Daily Signal Node</span>
+      </a>
+      <button id="refreshButton" class="topbar-button" type="button">刷新 / REFRESH</button>
+      <div class="live" id="freshnessBadge" data-state="checking"><span></span><b id="freshnessLabel">检查中 / CHECKING</b></div>
     </header>
 
     <main>
-      <section class="summary" aria-label="今日概览">
-        <article class="summary-card lead">
-          <span>今日最高指数</span>
-          <strong id="topScore">--</strong>
-          <small id="topSymbol">等待数据</small>
-        </article>
-        <article class="summary-card">
-          <span>监控标的</span>
-          <strong id="symbolCount">--</strong>
-          <small>Favorite 列表</small>
-        </article>
-        <article class="summary-card long">
-          <span>偏多</span>
-          <strong id="longCount">--</strong>
-          <small>指数 ≥ 30 且方向明确</small>
-        </article>
-        <article class="summary-card short">
-          <span>偏空</span>
-          <strong id="shortCount">--</strong>
-          <small>指数 ≥ 30 且方向明确</small>
-        </article>
-      </section>
-
-      <section class="board" aria-labelledby="boardTitle">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Ranked by entry index</p>
-            <h2 id="boardTitle">日线机会榜</h2>
+      <section class="monitor-panel">
+        <div class="stale-banner" id="staleBanner" role="status" hidden></div>
+        <div class="hero-status-list">
+          <div class="hero-status-row">
+            <span>本地时间 / LOCAL TIME</span>
+            <strong id="clock">--:--:--</strong>
           </div>
-          <div class="filters" role="group" aria-label="筛选">
-            <button class="active" data-filter="all">全部</button>
-            <button data-filter="long">只看多</button>
-            <button data-filter="short">只看空</button>
-            <button data-filter="entry">≥ 70</button>
-            <button data-filter="liquidity">有信号 3</button>
+          <div class="hero-status-row">
+            <span>信号 K 线 / SIGNAL BAR</span>
+            <strong id="barRange">--</strong>
+          </div>
+          <div class="hero-status-row">
+            <span>最后数据刷新节点 / LAST DATA REFRESH</span>
+            <strong id="capturedAt">--</strong>
           </div>
         </div>
-        <div class="ranking" id="ranking"></div>
-      </section>
 
-      <section class="matrix-section" aria-labelledby="matrixTitle">
-        <div class="section-head compact">
-          <div>
-            <p class="eyebrow">Signal matrix</p>
-            <h2 id="matrixTitle">三项信号矩阵</h2>
+        <nav class="report-tabs" aria-label="周期切换">
+          <button class="report-tab active" type="button" aria-selected="true">
+            <small>1D</small><strong>日线</strong>
+          </button>
+          <button class="report-tab" type="button" disabled title="4 小时信号即将上线">
+            <small>4H</small><strong>即将上线</strong>
+          </button>
+        </nav>
+
+        <section class="digest">
+          <div class="digest-heading">
+            <div>
+              <small>今日信号 / DAILY BRIEF</small>
+              <h2>日线进场指数</h2>
+              <p id="digestPeriod">--</p>
+            </div>
+            <span class="status-pill" id="digestStatus">正在读取…</span>
           </div>
-          <p class="hint">点击任意标的查看得分拆解</p>
-        </div>
-        <div class="matrix-wrap">
-          <table class="matrix">
-            <thead>
-              <tr>
-                <th>标的</th>
-                <th>信号 1 · 超买超卖</th>
-                <th>信号 2 · 背离箭头</th>
-                <th>信号 3 · 流动性</th>
-                <th>指数</th>
-              </tr>
-            </thead>
-            <tbody id="matrix"></tbody>
-          </table>
-        </div>
-      </section>
+          <div class="digest-grid">
+            <div class="digest-copy">
+              <section>
+                <div class="kpis" id="kpis"><span>正在读取信号数据…</span></div>
+              </section>
+              <section>
+                <h3>今日结论</h3>
+                <div class="bullet-list" id="conclusions"></div>
+              </section>
+            </div>
+            <section class="leaders">
+              <div class="leaders-heading">
+                <h3>进场指数排行</h3>
+                <span>0–100 · 越高越推荐进场<br />多空差距 &lt;10 显示观望</span>
+              </div>
+              <div class="leader-table">
+                <div class="leader-header"><span>标的</span><span>指数</span><span>方向</span><span>评级</span></div>
+                <div id="leaders"></div>
+              </div>
+              <p class="footnote">点击任意标的查看得分拆解</p>
+            </section>
+          </div>
+        </section>
 
-      <section class="method" aria-labelledby="methodTitle">
-        <div>
-          <p class="eyebrow">Scoring rules</p>
-          <h2 id="methodTitle">指数怎么算</h2>
-        </div>
-        <div class="rules">
-          <article><b>信号 1</b><p>Oscillator Toolkit 主线跌破 20 偏多、超过 80 偏空；≤10 或 ≥90 为深度区。</p><span>+20 / +25</span></article>
-          <article><b>信号 2</b><p>向上箭头为底背离，向下箭头为顶背离；只认最近 3 根日线。</p><span>+20 / +30</span></article>
-          <article><b>信号 3</b><p>正数买方占优，负数卖方占优；按绝对值 &lt;10、10–15、15–20、≥20 分档。</p><span>+5 → +45</span></article>
-          <article><b>缺失保护</b><p>没有流动性指标时，只按信号 1、2 换算，最高 80 分；两边差距不到 10 分显示观望。</p><span>cap 80</span></article>
-        </div>
-      </section>
+        <section class="market">
+          <div class="market-block">
+            <small>信号矩阵 / SIGNAL MATRIX</small>
+            <h2>三项信号明细</h2>
+            <p class="period">S1 超买超卖 · S2 背离箭头 · S3 流动性失衡</p>
+            <div class="filter-tabs" role="group" aria-label="筛选">
+              <button class="filter-tab active" type="button" data-filter="all">全部</button>
+              <button class="filter-tab" type="button" data-filter="long">偏多</button>
+              <button class="filter-tab" type="button" data-filter="short">偏空</button>
+              <button class="filter-tab" type="button" data-filter="entry">指数 ≥ 70</button>
+              <button class="filter-tab" type="button" data-filter="liquidity">有信号 3</button>
+            </div>
+            <div class="matrix">
+              <div class="matrix-header">
+                <span>标的 / 价格</span><span>S1 · 超买超卖</span><span>S2 · 背离箭头</span><span>S3 · 流动性</span><span>多 / 空</span><span>指数</span>
+              </div>
+              <div id="matrix"></div>
+            </div>
+          </div>
+        </section>
 
-      <section class="quality" aria-labelledby="qualityTitle">
-        <div>
-          <p class="eyebrow">Data quality</p>
-          <h2 id="qualityTitle">本次读取说明</h2>
-        </div>
-        <p id="captureNote"></p>
-        <ul id="issues"></ul>
+        <section class="rules-section">
+          <div class="market-block">
+            <small>评分规则 / SCORING RULES</small>
+            <h2>指数怎么算</h2>
+            <div class="rules">
+              <article><b>S1 超买超卖</b><p>Oscillator Toolkit 主线跌破 20 虚线偏多、超过 80 虚线偏空；≤10 或 ≥90 为深度区。</p><strong>+20 / +25</strong></article>
+              <article><b>S2 背离箭头</b><p>向上箭头为底背离，向下箭头为顶背离；只认最近 3 根日线，越新分越高。</p><strong>+20 / +30</strong></article>
+              <article><b>S3 流动性</b><p>正数买方、负数卖方；|值| &lt;10 弱、10–15 中等、15–20 潜在进场、≥20 强烈推荐。反向时扣分。</p><strong>+5 → +45</strong></article>
+              <article><b>缺失保护</b><p>没有流动性指标时，只按 S1、S2 换算，最高 80 分；多空差距不到 10 分显示观望。</p><strong>CAP 80</strong></article>
+            </div>
+            <div class="tiers">
+              <span><i class="t-strong"></i>85+ 强烈推荐</span>
+              <span><i class="t-entry"></i>70+ 推荐进场</span>
+              <span><i class="t-potential"></i>50+ 潜在机会</span>
+              <span><i class="t-watch"></i>30+ 观察</span>
+              <span><i class="t-none"></i>&lt;30 无信号</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="quality-section">
+          <div class="market-block">
+            <small>数据质量 / DATA QUALITY</small>
+            <h2>本次读取说明</h2>
+            <p class="quality-note" id="captureNote"></p>
+            <div class="bullet-list" id="issues"></div>
+          </div>
+        </section>
+
+        <footer>
+          <span>仅为信号整理，不构成投资建议 / NOT FINANCIAL ADVICE</span>
+          <span id="sourceLabel">来源 / SOURCE：OpenMarket</span>
+        </footer>
       </section>
     </main>
 
@@ -119,10 +139,6 @@
       <div id="detailBody"></div>
     </dialog>
 
-    <footer>
-      <span>仅为信号整理，不构成投资建议。</span>
-      <span>来源：OpenMarket 共享图表读数</span>
-    </footer>
-    <script type="module" src="/app.js"></script>
+    <script type="module" src="/app.js?v=2"></script>
   </body>
 </html>

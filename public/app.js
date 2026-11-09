@@ -1,11 +1,6 @@
 const state = { latest: null, history: [], filter: "all" };
 
-const labels = {
-  long: "做多",
-  short: "做空",
-  wait: "观望",
-};
-
+const labels = { long: "做多", short: "做空", wait: "观望" };
 const el = (id) => document.getElementById(id);
 
 function escapeHtml(value) {
@@ -24,93 +19,142 @@ function formatNumber(value) {
 }
 
 function signedValue(value) {
-  if (value === null || value === undefined) return "无";
+  if (value === null || value === undefined) return "—";
   return `${value > 0 ? "+" : ""}${value.toFixed(2)}`;
 }
 
-function tone(direction) {
-  return direction === "long" ? "var(--long)" : direction === "short" ? "var(--short)" : "var(--wait)";
+function formatTime(value) {
+  return new Date(value).toLocaleString("zh-CN", { timeZone: "Asia/Shanghai", hour12: false });
 }
 
-function chip(signal, text) {
-  const active = Boolean(signal.side);
-  return `<span class="chip ${active ? `on ${signal.side}` : "off"}">${escapeHtml(text)}</span>`;
+function tag(signal, text) {
+  return `<span class="tag ${signal.side || ""}">${escapeHtml(text)}</span>`;
 }
 
 function arrowText(row) {
   const signal = row.result.signals.divergence;
   if (!row.arrow) return "无箭头";
-  return signal.active ? `${signal.label} · ${row.arrow.barsAgo} 根前` : `${signal.label} · ${row.arrow.date}`;
+  return signal.active ? `${signal.label} · ${row.arrow.barsAgo} 根前` : `${signal.label}`;
+}
+
+function arrowNote(row) {
+  if (!row.arrow) return "近期无背离箭头";
+  return `${row.arrow.type === "bullish" ? "↑" : "↓"} ${row.arrow.date} · ${row.arrow.barsAgo} 根前`;
 }
 
 function filteredRows() {
   const rows = state.latest?.rows ?? [];
   return rows.filter((row) => {
-    if (state.filter === "long" || state.filter === "short") return row.result.direction === state.filter;
+    const bias = row.result.direction === "wait" ? row.result.bias : row.result.direction;
+    if (state.filter === "long" || state.filter === "short") return bias === state.filter;
     if (state.filter === "entry") return row.result.index >= 70;
     if (state.filter === "liquidity") return row.liquidity !== null;
     return true;
   });
 }
 
-function renderSummary() {
-  const rows = state.latest.rows;
-  const top = rows[0];
-  el("topScore").textContent = top?.result.index ?? "--";
-  el("topSymbol").textContent = top ? `${top.symbol} · ${labels[top.result.direction]} · ${top.result.tierLabel}` : "无数据";
-  el("symbolCount").textContent = rows.length;
-  el("longCount").textContent = rows.filter((row) => row.result.direction === "long").length;
-  el("shortCount").textContent = rows.filter((row) => row.result.direction === "short").length;
-
-  const captured = new Date(state.latest.capturedAt);
-  const ageHours = (Date.now() - captured.getTime()) / 36e5;
-  const time = captured.toLocaleString("zh-CN", { timeZone: "Asia/Shanghai", hour12: false });
-  el("freshness").textContent = `${ageHours > 30 ? "数据可能过期 · " : ""}更新于 ${time} · ${state.latest.timeframe}`;
+function startClock() {
+  const tick = () => {
+    el("clock").textContent = new Date().toLocaleString("zh-CN", { hour12: false });
+  };
+  tick();
+  setInterval(tick, 1000);
 }
 
-function renderRanking() {
-  const rows = filteredRows();
-  if (!rows.length) {
-    el("ranking").innerHTML = `<div class="empty">当前筛选下没有标的。</div>`;
-    return;
+function renderStatus() {
+  const { latest } = state;
+  const ageHours = (Date.now() - new Date(latest.capturedAt).getTime()) / 36e5;
+  const stale = ageHours > 30;
+  const badge = el("freshnessBadge");
+  badge.dataset.state = stale ? "stale" : "fresh";
+  el("freshnessLabel").textContent = stale ? "数据过期 / STALE" : "数据最新 / UP TO DATE";
+  const banner = el("staleBanner");
+  banner.hidden = !stale;
+  if (stale) banner.innerHTML = `<strong>数据可能过期：</strong>最后读取于 ${escapeHtml(formatTime(latest.capturedAt))}，已超过 30 小时未更新。`;
+
+  const bars = [...new Set(latest.rows.map((row) => row.barTime))];
+  el("barRange").textContent = `${latest.timeframe} · ${bars.join(" / ")}`;
+  el("capturedAt").textContent = `${formatTime(latest.capturedAt)} (UTC+8)`;
+  el("digestPeriod").textContent = `${latest.date} · ${latest.rows.length} 个 Favorite 标的 · ${latest.timeframe}`;
+  el("sourceLabel").textContent = `来源 / SOURCE：${latest.source}`;
+
+  const status = el("digestStatus");
+  const partial = latest.rows.some((row) => row.liquidity === null) || (latest.issues || []).length;
+  status.className = `status-pill ${partial ? "partial" : "complete"}`;
+  status.textContent = partial ? "部分标的无信号 3 / PARTIAL" : "读取完整 / COMPLETE";
+}
+
+function renderKpis() {
+  const rows = state.latest.rows;
+  const top = rows[0];
+  const entry = rows.filter((row) => row.result.index >= 70).length;
+  const actionable = rows.filter((row) => row.result.direction !== "wait");
+  const withLiquidity = rows.filter((row) => row.liquidity !== null).length;
+  el("kpis").innerHTML = `
+    <div><strong>${top?.result.index ?? "--"}</strong><b>${escapeHtml(top?.symbol ?? "")}</b><span>今日最高指数 / TOP INDEX</span></div>
+    <div><strong>${entry}</strong><b>≥ 70</b><span>推荐进场标的 / ENTRY</span></div>
+    <div><strong>${actionable.length}</strong><b>多 ${actionable.filter((r) => r.result.direction === "long").length} · 空 ${actionable.filter((r) => r.result.direction === "short").length}</b><span>方向明确 / DIRECTIONAL</span></div>
+    <div><strong>${withLiquidity}<em style="font-size:16px;color:#666;font-style:normal">/${rows.length}</em></strong><b>S3</b><span>有流动性指标 / LIQUIDITY</span></div>`;
+}
+
+function renderConclusions() {
+  const rows = state.latest.rows;
+  const lines = [];
+  const entries = rows.filter((row) => row.result.index >= 70);
+  if (entries.length) {
+    lines.push(`今日有 <span class="hl signal">${entries.length}</span> 个标的达到推荐进场：${entries
+      .map((row) => `<b>${escapeHtml(row.symbol)}</b> <span class="hl ${row.result.direction}">${labels[row.result.direction]} ${row.result.index}</span>`)
+      .join("、")}。`);
+  } else {
+    lines.push(`今日没有标的达到 <span class="hl signal">70</span> 分进场线，整体以 <span class="hl wait">观望</span> 为主。`);
   }
-  el("ranking").innerHTML = rows
+  const oversold = rows.filter((row) => row.result.signals.oscillator.side === "long");
+  const overbought = rows.filter((row) => row.result.signals.oscillator.side === "short");
+  if (oversold.length) lines.push(`超卖区（&lt;20）：${oversold.map((row) => `<b>${escapeHtml(row.symbol)}</b> ${row.oscillator.toFixed(2)}`).join("、")}，偏多等待确认。`);
+  if (overbought.length) lines.push(`超买区（&gt;80）：${overbought.map((row) => `<b>${escapeHtml(row.symbol)}</b> ${row.oscillator.toFixed(2)}`).join("、")}，偏空等待确认。`);
+  if (!oversold.length && !overbought.length) lines.push("没有标的处于 20 / 80 虚线外。");
+  const fresh = rows.filter((row) => row.result.signals.divergence.active);
+  lines.push(fresh.length
+    ? `近 3 根日线出现背离箭头：${fresh.map((row) => `<b>${escapeHtml(row.symbol)}</b> ${escapeHtml(row.result.signals.divergence.label)}`).join("、")}。`
+    : "近 3 根日线没有新的背离箭头，已有箭头均已过期。");
+  const liq = rows.filter((row) => row.liquidity !== null);
+  if (liq.length) lines.push(`流动性失衡：${liq.map((row) => `<b>${escapeHtml(row.symbol)}</b> <span class="hl ${row.liquidity >= 0 ? "long" : "short"}">${signedValue(row.liquidity)}</span> ${escapeHtml(row.result.signals.liquidity.label)}`).join("、")}。`);
+  el("conclusions").innerHTML = lines.map((line) => `<article><p>${line}</p></article>`).join("");
+}
+
+function renderLeaders() {
+  el("leaders").innerHTML = state.latest.rows
     .map((row, index) => {
       const { result } = row;
-      const signals = result.signals;
       return `
-        <button class="signal-row" data-symbol="${escapeHtml(row.symbol)}" style="animation-delay:${index * 45}ms">
-          <span class="score-orb" style="--score:${result.index};--tone:${tone(result.direction)}">${result.index}</span>
-          <span class="symbol-name"><strong>${escapeHtml(row.symbol)}</strong><span>${escapeHtml(row.name)} · ${formatNumber(row.price)}</span></span>
-          <span class="details">
-            <span class="chips">
-              ${chip(signals.oscillator, `S1 ${row.oscillator.toFixed(2)} ${signals.oscillator.label}`)}
-              ${chip(signals.divergence, `S2 ${arrowText(row)}`)}
-              ${chip(signals.liquidity, `S3 ${signedValue(row.liquidity)} ${signals.liquidity.label}`)}
-            </span>
-            <span class="reason">${escapeHtml(row.reason)}</span>
-          </span>
-          <span class="verdict">
-            <span class="direction ${result.direction}">${labels[result.direction]}</span>
-            <small>${escapeHtml(result.tierLabel)} · 多 ${result.long} / 空 ${result.short}</small>
-          </span>
+        <button class="leader-row" type="button" data-symbol="${escapeHtml(row.symbol)}" style="animation-delay:${index * 50}ms">
+          <span class="sym-cell"><b>${String(index + 1).padStart(2, "0")}</b><span class="sym">${escapeHtml(row.symbol)}</span><small>${escapeHtml(row.market)}</small></span>
+          <span class="score-cell"><strong>${result.index}</strong><span class="bar"><i style="width:${result.index}%"></i></span></span>
+          <span class="dir ${result.direction}">${labels[result.direction]}</span>
+          <span class="tier ${result.tier}">${escapeHtml(result.tierLabel)}</span>
         </button>`;
     })
     .join("");
 }
 
 function renderMatrix() {
-  el("matrix").innerHTML = state.latest.rows
+  const rows = filteredRows();
+  if (!rows.length) {
+    el("matrix").innerHTML = `<div class="empty">当前筛选下没有标的。</div>`;
+    return;
+  }
+  el("matrix").innerHTML = rows
     .map((row) => {
-      const signals = row.result.signals;
+      const s = row.result.signals;
       return `
-        <tr data-symbol="${escapeHtml(row.symbol)}">
-          <td>${escapeHtml(row.symbol)}</td>
-          <td>${chip(signals.oscillator, signals.oscillator.label)} <span class="value">${row.oscillator.toFixed(2)}</span></td>
-          <td>${chip(signals.divergence, arrowText(row))}</td>
-          <td>${chip(signals.liquidity, signals.liquidity.label)} <span class="value">${signedValue(row.liquidity)}</span></td>
-          <td><span class="direction ${row.result.direction}">${row.result.index} · ${labels[row.result.direction]}</span></td>
-        </tr>`;
+        <button class="matrix-row" type="button" data-symbol="${escapeHtml(row.symbol)}">
+          <span class="cell"><span class="sym">${escapeHtml(row.symbol)}</span><em>${formatNumber(row.price)}</em></span>
+          <span class="cell">${tag(s.oscillator, s.oscillator.label)}<em>主线 <span class="num">${row.oscillator.toFixed(2)}</span></em></span>
+          <span class="cell">${tag(s.divergence, arrowText(row))}<em>${escapeHtml(arrowNote(row))}</em></span>
+          <span class="cell">${tag(s.liquidity, s.liquidity.label)}<em>读数 <span class="num">${signedValue(row.liquidity)}</span></em></span>
+          <span class="ls"><b>${row.result.long}</b> / <i>${row.result.short}</i></span>
+          <span class="cell"><span class="big-score">${row.result.index}</span><em class="dir ${row.result.direction}">${labels[row.result.direction]}</em></span>
+        </button>`;
     })
     .join("");
 }
@@ -119,10 +163,10 @@ function renderQuality() {
   el("captureNote").textContent = state.latest.note || "";
   const missing = state.latest.rows.filter((row) => row.liquidity === null).map((row) => row.symbol);
   const issues = [...(state.latest.issues || [])];
-  if (missing.length) issues.unshift(`没有流动性失衡指标：${missing.join("、")}，指数上限为 80。`);
-  el("issues").innerHTML = issues.length
-    ? issues.map((issue) => `<li>${escapeHtml(issue)}</li>`).join("")
-    : "<li>没有读取异常。</li>";
+  if (missing.length) issues.unshift(`没有流动性失衡指标：${missing.join("、")}，这些标的指数上限为 80。`);
+  el("issues").innerHTML = (issues.length ? issues : ["没有读取异常。"])
+    .map((issue) => `<article><p>${escapeHtml(issue)}</p></article>`)
+    .join("");
 }
 
 function historyBars(symbol) {
@@ -138,25 +182,28 @@ function openDetail(symbol) {
   if (!row) return;
   const { result } = row;
   const s = result.signals;
-  const liquidityPoints = s.liquidity.available ? `+${s.liquidity.points}` : "—";
+  const liquidityPoints = s.liquidity.available
+    ? `${s.liquidity.points ? `+${s.liquidity.points}` : "0"}${s.liquidity.penalty ? ` / −${s.liquidity.penalty}` : ""}`
+    : "—";
   el("detailBody").innerHTML = `
-    <div class="detail-top">
-      <span class="score-orb" style="--score:${result.index};--tone:${tone(result.direction)}">${result.index}</span>
+    <div class="detail-head">
+      <span class="big">${result.index}</span>
       <div>
-        <p class="eyebrow">${escapeHtml(row.market)} · ${escapeHtml(row.barTime)}</p>
-        <h2>${escapeHtml(row.symbol)}</h2>
-        <span class="direction ${result.direction}">${labels[result.direction]} · ${escapeHtml(result.tierLabel)}</span>
+        <small>${escapeHtml(row.market)} · ${escapeHtml(row.barTime)}</small>
+        <h2>${escapeHtml(row.symbol)} <span style="color:#666;font-size:12px;font-weight:400">${escapeHtml(row.name)}</span></h2>
+        <span class="dir ${result.direction}">${labels[result.direction]}</span> <span class="tier ${result.tier}">· ${escapeHtml(result.tierLabel)}</span>
       </div>
     </div>
     <div class="breakdown">
-      <div><b>信号 1</b><span>${escapeHtml(s.oscillator.label)}，主线 ${row.oscillator.toFixed(2)}</span><span class="points">${s.oscillator.side ? `+${s.oscillator.points}` : "0"}</span></div>
-      <div><b>信号 2</b><span>${escapeHtml(arrowText(row))}</span><span class="points">${s.divergence.side ? `+${s.divergence.points}` : "0"}</span></div>
-      <div><b>信号 3</b><span>${escapeHtml(s.liquidity.label)}，读数 ${signedValue(row.liquidity)}</span><span class="points">${liquidityPoints}</span></div>
-      <div><b>结果</b><span>做多 ${result.long} / 做空 ${result.short}${result.capped ? "，缺少信号 3，已按 80 分上限换算" : ""}</span><span class="points">${result.index}</span></div>
+      <div><b>S1</b><span>${escapeHtml(s.oscillator.label)}，主线 ${row.oscillator.toFixed(2)}</span><span class="pts">${s.oscillator.side ? `+${s.oscillator.points}` : "0"}</span></div>
+      <div><b>S2</b><span>${escapeHtml(arrowText(row))}${row.arrow ? `（${escapeHtml(row.arrow.date)}）` : ""}</span><span class="pts">${s.divergence.side ? `+${s.divergence.points}` : "0"}</span></div>
+      <div><b>S3</b><span>${escapeHtml(s.liquidity.label)}，读数 ${signedValue(row.liquidity)}</span><span class="pts">${liquidityPoints}</span></div>
+      <div><b>结果</b><span>做多 ${result.long} / 做空 ${result.short}${result.capped ? "；缺少 S3，按 80 分上限换算" : ""}<br />${escapeHtml(row.reason)}</span><span class="pts">${result.index}</span></div>
     </div>
-    <p class="eyebrow">Last 30 daily readings</p>
-    ${historyBars(row.symbol)}
-  `;
+    <div class="history-wrap">
+      <small>近 30 日指数 / LAST 30 DAILY READINGS</small>
+      ${historyBars(row.symbol)}
+    </div>`;
   el("detail").showModal();
 }
 
@@ -165,9 +212,10 @@ function bindEvents() {
     button.addEventListener("click", () => {
       state.filter = button.dataset.filter;
       document.querySelectorAll("[data-filter]").forEach((item) => item.classList.toggle("active", item === button));
-      renderRanking();
+      renderMatrix();
     });
   });
+  el("refreshButton").addEventListener("click", () => load());
   document.addEventListener("click", (event) => {
     const target = event.target.closest("[data-symbol]");
     if (target) openDetail(target.dataset.symbol);
@@ -175,23 +223,29 @@ function bindEvents() {
   });
 }
 
-async function init() {
-  bindEvents();
+async function load() {
+  el("freshnessBadge").dataset.state = "checking";
+  el("freshnessLabel").textContent = "检查中 / CHECKING";
   try {
     const [latest, history] = await Promise.all([
       fetch("/data/latest.json", { cache: "no-store" }).then((response) => response.json()),
       fetch("/data/history.json", { cache: "no-store" }).then((response) => response.json()),
     ]);
     Object.assign(state, { latest, history });
-    renderSummary();
-    renderRanking();
+    renderStatus();
+    renderKpis();
+    renderConclusions();
+    renderLeaders();
     renderMatrix();
     renderQuality();
   } catch (error) {
-    el("freshness").textContent = "数据读取失败";
-    el("ranking").innerHTML = `<div class="empty">无法读取信号数据，请稍后刷新。</div>`;
+    el("freshnessBadge").dataset.state = "error";
+    el("freshnessLabel").textContent = "读取失败 / ERROR";
+    el("matrix").innerHTML = `<div class="empty">无法读取信号数据，请稍后刷新。</div>`;
     console.error(error);
   }
 }
 
-init();
+bindEvents();
+startClock();
+load();
