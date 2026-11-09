@@ -12,7 +12,7 @@ test("liquidity alone stays observation-only", () => {
 test("fresh divergence plus strong liquidity is an entry", () => {
   const result = scoreTimeframe({
     oscillator: 18,
-    arrow: { type: "bullish", barsAgo: 1 },
+    arrow: { type: "bullish", barsAgo: 0 },
     liquidity: 21,
   });
   assert.equal(result.long, 95);
@@ -40,10 +40,10 @@ test("missing liquidity is scaled and capped at 80", () => {
   assert.equal(result.capped, true);
 });
 
-test("expired arrows do not score", () => {
+test("previous-day arrows do not score", () => {
   const result = scoreTimeframe({
     oscillator: 40,
-    arrow: { type: "bullish", barsAgo: 3 },
+    arrow: { type: "bullish", barsAgo: 1 },
     liquidity: null,
   });
   assert.equal(result.index, 0);
@@ -53,9 +53,9 @@ test("expired arrows do not score", () => {
 test("negative liquidity favors short", () => {
   const result = scoreTimeframe({
     oscillator: 84,
-    arrow: { type: "bearish", barsAgo: 2 },
+    arrow: { type: "bearish", barsAgo: 0 },
     liquidity: -16,
   });
-  assert.equal(result.short, 70);
+  assert.equal(result.short, 80);
   assert.equal(result.direction, "short");
 });

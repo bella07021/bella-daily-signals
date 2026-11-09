@@ -33,13 +33,13 @@ function tag(signal, text) {
 
 function arrowText(row) {
   const signal = row.result.signals.divergence;
-  if (!row.arrow) return "无箭头";
-  return signal.active ? `${signal.label} · ${row.arrow.barsAgo} 根前` : `${signal.label}`;
+  if (!signal.active) return "今日无箭头";
+  return signal.label;
 }
 
 function arrowNote(row) {
-  if (!row.arrow) return "近期无背离箭头";
-  return `${row.arrow.type === "bullish" ? "↑" : "↓"} ${row.arrow.date} · ${row.arrow.barsAgo} 根前`;
+  if (!row.result.signals.divergence.active) return "只检查最新一根日线";
+  return `${row.arrow.type === "bullish" ? "↑" : "↓"} ${row.arrow.date} · 最新日线`;
 }
 
 function filteredRows() {
@@ -115,8 +115,8 @@ function renderConclusions() {
   if (!oversold.length && !overbought.length) lines.push("没有标的处于 20 / 80 虚线外。");
   const fresh = rows.filter((row) => row.result.signals.divergence.active);
   lines.push(fresh.length
-    ? `近 3 根日线出现背离箭头：${fresh.map((row) => `<b>${escapeHtml(row.symbol)}</b> ${escapeHtml(row.result.signals.divergence.label)}`).join("、")}。`
-    : "近 3 根日线没有新的背离箭头，已有箭头均已过期。");
+    ? `最新日线出现背离箭头：${fresh.map((row) => `<b>${escapeHtml(row.symbol)}</b> ${escapeHtml(row.result.signals.divergence.label)}`).join("、")}。`
+    : "最新一根日线没有背离箭头；历史箭头不纳入今日信号。");
   const liq = rows.filter((row) => row.liquidity !== null);
   if (liq.length) lines.push(`流动性失衡：${liq.map((row) => `<b>${escapeHtml(row.symbol)}</b> <span class="hl ${row.liquidity >= 0 ? "long" : "short"}">${signedValue(row.liquidity)}</span> ${escapeHtml(row.result.signals.liquidity.label)}`).join("、")}。`);
   el("conclusions").innerHTML = lines.map((line) => `<article><p>${line}</p></article>`).join("");

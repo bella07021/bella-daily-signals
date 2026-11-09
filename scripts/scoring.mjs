@@ -10,7 +10,6 @@ export const TIERS = [
 
 const NO_LIQUIDITY_CAP = 80;
 const MAX_WITHOUT_LIQUIDITY = 55; // 25 (signal 1) + 30 (signal 2)
-const ARROW_WINDOW_BARS = 3;
 
 export function scoreOscillator(value) {
   if (!Number.isFinite(value)) return { side: null, points: 0, label: "缺失" };
@@ -26,12 +25,10 @@ export function scoreArrow(arrow) {
   const side = arrow.type === "bullish" ? "long" : "short";
   const name = arrow.type === "bullish" ? "底背离" : "顶背离";
   const bars = arrow.barsAgo;
-  if (!Number.isFinite(bars) || bars >= ARROW_WINDOW_BARS) {
-    return { side: null, points: 0, label: `${name}已过期`, active: false, stale: true };
+  if (bars !== 0) {
+    return { side: null, points: 0, label: "今日无箭头", active: false, stale: true };
   }
-  // barsAgo 0 = latest closed/current bar, 1 = previous bar.
-  if (bars <= 1) return { side, points: 30, label: `新${name}`, active: true };
-  return { side, points: 20, label: name, active: true };
+  return { side, points: 30, label: `当日${name}`, active: true };
 }
 
 export function liquidityStrength(value) {
@@ -115,12 +112,11 @@ export function describe(symbol, result) {
   const parts = [];
   const { oscillator, divergence, liquidity } = result.signals;
   if (oscillator.side) parts.push(`${oscillator.label} ${symbol.oscillator.toFixed(2)}`);
-  if (divergence.active) parts.push(`${divergence.label}箭头（${symbol.arrow.barsAgo} 根前）`);
+  if (divergence.active) parts.push(`${divergence.label}箭头`);
   if (liquidity.available) {
     parts.push(`流动性 ${symbol.liquidity > 0 ? "+" : ""}${symbol.liquidity.toFixed(2)}（${liquidity.label}）`);
   }
   if (!parts.length) parts.push("三项信号都没有触发");
   if (!liquidity.available) parts.push("缺少流动性确认");
-  if (divergence.stale) parts.push(`最近一次${divergence.label.replace("已过期", "")}已超出 3 根 K 线`);
   return parts.join("，");
 }

@@ -2,11 +2,11 @@
   {
     "date": "2026-11-09",
     "values": {
-      "INTC": {
-        "index": 73,
-        "direction": "long"
-      },
       "GOOGL": {
+        "index": 29,
+        "direction": "wait"
+      },
+      "INTC": {
         "index": 29,
         "direction": "wait"
       },

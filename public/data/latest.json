@@ -23,11 +23,7 @@
       "assetClass": "crypto",
       "price": 2091.77,
       "oscillator": 26.25,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 8,
-        "date": "2026-11-01"
-      },
+      "arrow": null,
       "liquidity": 12.51,
       "barTime": "2026-11-09 UTC"
     },
@@ -115,11 +111,7 @@
       "assetClass": "stock",
       "price": 45.97,
       "oscillator": 17.75,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 4,
-        "date": "2026-11-02"
-      },
+      "arrow": null,
       "liquidity": null,
       "barTime": "2026-11-06 US close"
     },
@@ -130,11 +122,7 @@
       "assetClass": "stock",
       "price": 835.06,
       "oscillator": 13.47,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 5,
-        "date": "2026-10-30"
-      },
+      "arrow": null,
       "liquidity": null,
       "barTime": "2026-11-06 US close"
     },
@@ -145,11 +133,7 @@
       "assetClass": "stock",
       "price": 690,
       "oscillator": 16.65,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 4,
-        "date": "2026-11-02"
-      },
+      "arrow": null,
       "liquidity": null,
       "barTime": "2026-11-06 US close"
     },
@@ -160,11 +144,7 @@
       "assetClass": "stock",
       "price": 127.34,
       "oscillator": 33.48,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 9,
-        "date": "2026-10-26"
-      },
+      "arrow": null,
       "liquidity": null,
       "barTime": "2026-11-06 US close"
     },
@@ -186,11 +166,7 @@
       "assetClass": "stock",
       "price": 56.84,
       "oscillator": 10.89,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 0,
-        "date": "2026-11-06"
-      },
+      "arrow": null,
       "liquidity": null,
       "barTime": "2026-11-06 US close"
     },
@@ -242,52 +218,6 @@
   "issues": [],
   "rows": [
     {
-      "symbol": "INTC",
-      "name": "Intel Corporation",
-      "market": "NASDAQ INTC",
-      "assetClass": "stock",
-      "price": 56.84,
-      "oscillator": 10.89,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 0,
-        "date": "2026-11-06"
-      },
-      "liquidity": null,
-      "barTime": "2026-11-06 US close",
-      "result": {
-        "index": 73,
-        "long": 73,
-        "short": 0,
-        "bias": "long",
-        "direction": "long",
-        "tier": "entry",
-        "tierLabel": "推荐进场",
-        "signals": {
-          "oscillator": {
-            "side": "long",
-            "points": 20,
-            "label": "超卖"
-          },
-          "divergence": {
-            "side": "long",
-            "points": 30,
-            "label": "新底背离",
-            "active": true
-          },
-          "liquidity": {
-            "side": null,
-            "points": 0,
-            "penalty": 0,
-            "label": "无此指标",
-            "available": false
-          }
-        },
-        "capped": true
-      },
-      "reason": "超卖 10.89，新底背离箭头（0 根前），缺少流动性确认"
-    },
-    {
       "symbol": "GOOGL",
       "name": "Alphabet Inc.",
       "market": "NASDAQ GOOGL",
@@ -330,17 +260,13 @@
       "reason": "超卖 16.94，缺少流动性确认"
     },
     {
-      "symbol": "MU",
-      "name": "Micron",
-      "market": "NASDAQ MU",
+      "symbol": "INTC",
+      "name": "Intel Corporation",
+      "market": "NASDAQ INTC",
       "assetClass": "stock",
-      "price": 690,
-      "oscillator": 16.65,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 4,
-        "date": "2026-11-02"
-      },
+      "price": 56.84,
+      "oscillator": 10.89,
+      "arrow": null,
       "liquidity": null,
       "barTime": "2026-11-06 US close",
       "result": {
@@ -360,9 +286,8 @@
           "divergence": {
             "side": null,
             "points": 0,
-            "label": "底背离已过期",
-            "active": false,
-            "stale": true
+            "label": "无箭头",
+            "active": false
           },
           "liquidity": {
             "side": null,
@@ -374,7 +299,49 @@
         },
         "capped": true
       },
-      "reason": "超卖 16.65，缺少流动性确认，最近一次底背离已超出 3 根 K 线"
+      "reason": "超卖 10.89，缺少流动性确认"
+    },
+    {
+      "symbol": "MU",
+      "name": "Micron",
+      "market": "NASDAQ MU",
+      "assetClass": "stock",
+      "price": 690,
+      "oscillator": 16.65,
+      "arrow": null,
+      "liquidity": null,
+      "barTime": "2026-11-06 US close",
+      "result": {
+        "index": 29,
+        "long": 29,
+        "short": 0,
+        "bias": "long",
+        "direction": "wait",
+        "tier": "none",
+        "tierLabel": "无信号",
+        "signals": {
+          "oscillator": {
+            "side": "long",
+            "points": 20,
+            "label": "超卖"
+          },
+          "divergence": {
+            "side": null,
+            "points": 0,
+            "label": "无箭头",
+            "active": false
+          },
+          "liquidity": {
+            "side": null,
+            "points": 0,
+            "penalty": 0,
+            "label": "无此指标",
+            "available": false
+          }
+        },
+        "capped": true
+      },
+      "reason": "超卖 16.65，缺少流动性确认"
     },
     {
       "symbol": "QQQ",
@@ -425,11 +392,7 @@
       "assetClass": "stock",
       "price": 835.06,
       "oscillator": 13.47,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 5,
-        "date": "2026-10-30"
-      },
+      "arrow": null,
       "liquidity": null,
       "barTime": "2026-11-06 US close",
       "result": {
@@ -449,9 +412,8 @@
           "divergence": {
             "side": null,
             "points": 0,
-            "label": "底背离已过期",
-            "active": false,
-            "stale": true
+            "label": "无箭头",
+            "active": false
           },
           "liquidity": {
             "side": null,
@@ -463,7 +425,7 @@
         },
         "capped": true
       },
-      "reason": "超卖 13.47，缺少流动性确认，最近一次底背离已超出 3 根 K 线"
+      "reason": "超卖 13.47，缺少流动性确认"
     },
     {
       "symbol": "SOXL",
@@ -472,11 +434,7 @@
       "assetClass": "stock",
       "price": 45.97,
       "oscillator": 17.75,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 4,
-        "date": "2026-11-02"
-      },
+      "arrow": null,
       "liquidity": null,
       "barTime": "2026-11-06 US close",
       "result": {
@@ -496,9 +454,8 @@
           "divergence": {
             "side": null,
             "points": 0,
-            "label": "底背离已过期",
-            "active": false,
-            "stale": true
+            "label": "无箭头",
+            "active": false
           },
           "liquidity": {
             "side": null,
@@ -510,7 +467,7 @@
         },
         "capped": true
       },
-      "reason": "超卖 17.75，缺少流动性确认，最近一次底背离已超出 3 根 K 线"
+      "reason": "超卖 17.75，缺少流动性确认"
     },
     {
       "symbol": "SOL",
@@ -605,11 +562,7 @@
       "assetClass": "crypto",
       "price": 2091.77,
       "oscillator": 26.25,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 8,
-        "date": "2026-11-01"
-      },
+      "arrow": null,
       "liquidity": 12.51,
       "barTime": "2026-11-09 UTC",
       "result": {
@@ -629,9 +582,8 @@
           "divergence": {
             "side": null,
             "points": 0,
-            "label": "底背离已过期",
-            "active": false,
-            "stale": true
+            "label": "无箭头",
+            "active": false
           },
           "liquidity": {
             "side": "long",
@@ -644,7 +596,7 @@
         },
         "capped": false
       },
-      "reason": "流动性 +12.51（买方中等），最近一次底背离已超出 3 根 K 线"
+      "reason": "流动性 +12.51（买方中等）"
     },
     {
       "symbol": "SUI",
@@ -906,11 +858,7 @@
       "assetClass": "stock",
       "price": 127.34,
       "oscillator": 33.48,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 9,
-        "date": "2026-10-26"
-      },
+      "arrow": null,
       "liquidity": null,
       "barTime": "2026-11-06 US close",
       "result": {
@@ -930,9 +878,8 @@
           "divergence": {
             "side": null,
             "points": 0,
-            "label": "底背离已过期",
-            "active": false,
-            "stale": true
+            "label": "无箭头",
+            "active": false
           },
           "liquidity": {
             "side": null,
@@ -944,7 +891,7 @@
         },
         "capped": true
       },
-      "reason": "三项信号都没有触发，缺少流动性确认，最近一次底背离已超出 3 根 K 线"
+      "reason": "三项信号都没有触发，缺少流动性确认"
     },
     {
       "symbol": "USDT.D",
