@@ -1019,5 +1019,13 @@
       },
       "reason": "三项信号都没有触发，缺少流动性确认"
     }
-  ]
+  ],
+  "weeklyPerformance": {
+    "threshold": 60,
+    "days": 7,
+    "windowStart": "2026-11-02",
+    "windowEnd": "2026-11-08",
+    "currentDate": "2026-11-09",
+    "records": []
+  }
 }

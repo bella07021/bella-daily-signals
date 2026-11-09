@@ -4,79 +4,98 @@
     "values": {
       "GOOGL": {
         "index": 29,
-        "direction": "wait"
+        "direction": "wait",
+        "price": 284.75
       },
       "INTC": {
         "index": 29,
-        "direction": "wait"
+        "direction": "wait",
+        "price": 56.84
       },
       "MU": {
         "index": 29,
-        "direction": "wait"
+        "direction": "wait",
+        "price": 690
       },
       "QQQ": {
         "index": 29,
-        "direction": "wait"
+        "direction": "wait",
+        "price": 656.1
       },
       "SNDK": {
         "index": 29,
-        "direction": "wait"
+        "direction": "wait",
+        "price": 835.06
       },
       "SOXL": {
         "index": 29,
-        "direction": "wait"
+        "direction": "wait",
+        "price": 45.97
       },
       "SOL": {
         "index": 25,
-        "direction": "wait"
+        "direction": "wait",
+        "price": 87.04
       },
       "BTC": {
         "index": 15,
-        "direction": "wait"
+        "direction": "wait",
+        "price": 73850.5
       },
       "ETH": {
         "index": 15,
-        "direction": "wait"
+        "direction": "wait",
+        "price": 2091.77
       },
       "SUI": {
         "index": 5,
-        "direction": "wait"
+        "direction": "wait",
+        "price": 0.8295
       },
       "BNB": {
         "index": 0,
-        "direction": "wait"
+        "direction": "wait",
+        "price": 684.52
       },
       "CRCL": {
         "index": 0,
-        "direction": "wait"
+        "direction": "wait",
+        "price": 67.39
       },
       "GOLD": {
         "index": 0,
-        "direction": "wait"
+        "direction": "wait",
+        "price": 37.58
       },
       "HYPE": {
         "index": 0,
-        "direction": "wait"
+        "direction": "wait",
+        "price": 74.071
       },
       "SIL": {
         "index": 0,
-        "direction": "wait"
+        "direction": "wait",
+        "price": 78.75
       },
       "SKHY": {
         "index": 0,
-        "direction": "wait"
+        "direction": "wait",
+        "price": 127.34
       },
       "USDT.D": {
         "index": 0,
-        "direction": "wait"
+        "direction": "wait",
+        "price": 7.16
       },
       "XAU/USD": {
         "index": 0,
-        "direction": "wait"
+        "direction": "wait",
+        "price": 4096.37
       },
       "ZEC": {
         "index": 0,
-        "direction": "wait"
+        "direction": "wait",
+        "price": 1229.97
       }
     }
   }

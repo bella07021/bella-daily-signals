@@ -197,7 +197,39 @@ h3 { margin: 0 0 11px; color: white; font-size: 13px; font-weight: 600; }
 @keyframes rise { from { opacity: 0; transform: translateY(6px); } }
 
 /* Matrix */
-.market, .rules-section, .quality-section { border-top: 1px solid var(--line); background: #090909; }
+.market, .performance-section, .rules-section, .quality-section { border-top: 1px solid var(--line); background: #090909; }
+.performance-section { background: #0d0d0d; }
+.performance-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; }
+.performance-table { margin-top: 20px; padding: 4px 18px 8px; border: 1px solid #303030; overflow-x: auto; }
+.performance-header,
+.performance-row {
+  display: grid;
+  grid-template-columns: 1.25fr .9fr .9fr .85fr .85fr .8fr .8fr;
+  gap: 14px;
+  align-items: center;
+  min-width: 880px;
+}
+.performance-header { padding: 12px 0 10px; color: #666; font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
+.performance-row {
+  width: 100%;
+  padding: 13px 0;
+  border: 0;
+  border-top: 1px solid var(--line-2);
+  color: #aaa;
+  background: transparent;
+  font-size: 11px;
+  text-align: left;
+  cursor: pointer;
+}
+.performance-row:hover { background: #111; }
+.performance-row span { min-width: 0; }
+.performance-row small { display: block; margin: 4px 0 0; color: #666; font-size: 8px; letter-spacing: .04em; font-weight: 400; }
+.performance-symbol b { color: white; }
+.performance-symbol small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.performance-change { font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.performance-change.positive { color: var(--long); }
+.performance-change.negative { color: var(--short); }
+.performance-change.neutral { color: #888; }
 .rules-section { background: #0d0d0d; }
 .market-block { min-width: 0; padding: 24px 28px 28px; }
 .filter-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
@@ -317,6 +349,7 @@ dialog::backdrop { background: rgba(0, 0, 0, .72); backdrop-filter: blur(3px); }
   .report-tabs { grid-template-columns: repeat(2, 1fr); padding: 0 14px; }
   .report-tab { min-height: 52px; padding: 8px 12px; }
   .digest-heading { padding: 20px 16px 14px; align-items: flex-start; flex-direction: column; gap: 12px; }
+  .performance-heading { align-items: flex-start; flex-direction: column; gap: 12px; }
   .digest-copy { padding: 4px 16px 18px; }
   .leaders { padding: 20px 16px; }
   .leader-header, .leader-row { grid-template-columns: 1.4fr .9fr .6fr .7fr; gap: 8px; }

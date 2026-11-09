@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bella Signals // Daily Signal Node</title>
     <meta name="description" content="OpenMarket 收藏列表的日线超买超卖、背离与流动性失衡信号榜。" />
-    <link rel="stylesheet" href="/styles.css?v=2" />
+    <link rel="stylesheet" href="/styles.css?v=3" />
   </head>
   <body>
     <header class="topbar">
@@ -77,6 +77,26 @@
           </div>
         </section>
 
+        <section class="performance-section" id="performanceSection" hidden>
+          <div class="market-block">
+            <div class="performance-heading">
+              <div>
+                <small>近一周复盘 / 7D SIGNAL REVIEW</small>
+                <h2>高分信号价格表现</h2>
+                <p class="period" id="performancePeriod">--</p>
+              </div>
+              <span class="status-pill complete" id="performanceStatus">--</span>
+            </div>
+            <div class="performance-table">
+              <div class="performance-header">
+                <span>标的</span><span>触发日</span><span>分数 / 方向</span><span>触发价格</span><span>今日价格</span><span>价格涨跌</span><span>方向收益</span>
+              </div>
+              <div id="performanceRecords"></div>
+            </div>
+            <p class="footnote">回看今天之前 7 个自然日；分数严格 &gt;60 才记录。连续同方向高分只保留首次触发。</p>
+          </div>
+        </section>
+
         <section class="market">
           <div class="market-block">
             <small>信号矩阵 / SIGNAL MATRIX</small>
@@ -139,6 +159,6 @@
       <div id="detailBody"></div>
     </dialog>
 
-    <script type="module" src="/app.js?v=2"></script>
+    <script type="module" src="/app.js?v=3"></script>
   </body>
 </html>

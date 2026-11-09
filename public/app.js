@@ -27,6 +27,11 @@ function formatTime(value) {
   return new Date(value).toLocaleString("zh-CN", { timeZone: "Asia/Shanghai", hour12: false });
 }
 
+function formatPercent(value) {
+  if (!Number.isFinite(value)) return "—";
+  return `${value > 0 ? "+" : ""}${value.toFixed(2)}%`;
+}
+
 function tag(signal, text) {
   return `<span class="tag ${signal.side || ""}">${escapeHtml(text)}</span>`;
 }
@@ -137,6 +142,31 @@ function renderLeaders() {
     .join("");
 }
 
+function renderPerformance() {
+  const performance = state.latest.weeklyPerformance;
+  const section = el("performanceSection");
+  const records = performance?.records ?? [];
+  section.hidden = records.length === 0;
+  if (!records.length) return;
+
+  el("performancePeriod").textContent = `${performance.windowStart} → ${performance.windowEnd} · 截至 ${performance.currentDate}`;
+  el("performanceStatus").textContent = `${records.length} 条高分记录 / TRACKED`;
+  el("performanceRecords").innerHTML = records.map((record) => {
+    const priceTone = record.priceChangePct > 0 ? "positive" : record.priceChangePct < 0 ? "negative" : "neutral";
+    const returnTone = record.directionalReturnPct > 0 ? "positive" : record.directionalReturnPct < 0 ? "negative" : "neutral";
+    return `
+      <button class="performance-row" type="button" data-symbol="${escapeHtml(record.symbol)}">
+        <span class="performance-symbol"><b>${escapeHtml(record.symbol)}</b><small>${escapeHtml(record.name)}</small></span>
+        <span>${escapeHtml(record.signalDate)}<small>${record.elapsedDays} 天前</small></span>
+        <span><b>${record.signalIndex}</b><small class="dir ${record.direction}">${labels[record.direction]}</small></span>
+        <span class="num">${formatNumber(record.signalPrice)}</span>
+        <span class="num">${formatNumber(record.currentPrice)}</span>
+        <span class="performance-change ${priceTone}">${formatPercent(record.priceChangePct)}</span>
+        <span class="performance-change ${returnTone}">${formatPercent(record.directionalReturnPct)}</span>
+      </button>`;
+  }).join("");
+}
+
 function renderMatrix() {
   const rows = filteredRows();
   if (!rows.length) {
@@ -236,6 +266,7 @@ async function load() {
     renderKpis();
     renderConclusions();
     renderLeaders();
+    renderPerformance();
     renderMatrix();
     renderQuality();
   } catch (error) {

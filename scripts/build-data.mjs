@@ -2,6 +2,7 @@ import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, scoreTimeframe } from "./scoring.mjs";
+import { buildWeeklyPerformance } from "./performance.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const readingsDir = path.join(root, "data", "readings");
@@ -40,10 +41,15 @@ for (const file of files) {
 }
 
 const latest = snapshots.at(-1);
+latest.weeklyPerformance = buildWeeklyPerformance(snapshots);
 const history = snapshots.slice(-90).map((snapshot) => ({
   date: snapshot.date,
   values: Object.fromEntries(
-    snapshot.rows.map((row) => [row.symbol, { index: row.result.index, direction: row.result.direction }]),
+    snapshot.rows.map((row) => [row.symbol, {
+      index: row.result.index,
+      direction: row.result.direction,
+      price: row.price,
+    }]),
   ),
 }));
 
