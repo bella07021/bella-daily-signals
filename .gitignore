@@ -2,3 +2,4 @@ node_modules/
 .vercel/
 .captures/
 .DS_Store
+.vercel
