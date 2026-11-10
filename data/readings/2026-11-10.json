@@ -1,111 +1,114 @@
 {
   "date": "2026-11-10",
-  "capturedAt": "2026-11-10T14:30:48+08:00",
+  "capturedAt": "2026-11-10T18:44:45+08:00",
   "timeframe": "1D",
   "source": "OpenMarket shared chart bmhOD7gr",
-  "note": "北京时间 14:27–14:30 读取 Favorite 列表全部 20 个标的；列表未变化。逐个放大核对最右侧日线背离箭头；美股仍为 11 月 9 日已收盘日线。",
+  "note": "北京时间 18:33–18:44 读取 Favorite 列表全部 20 个标的；列表未变化。逐个放大核对最右侧日线背离箭头；ETH 与 SOL 出现当日底背离，DOGE 当日箭头已消失；美股仍为 11 月 9 日已收盘日线。",
   "symbols": [
     {
       "symbol": "BTC",
       "name": "Bitcoin",
       "market": "BINANCE.F BTCUSDT",
       "assetClass": "crypto",
-      "price": 74715.5,
-      "oscillator": 25.26,
+      "price": 74240.4,
+      "oscillator": 24.78,
       "arrow": null,
-      "liquidity": 13.94,
-      "barTime": "2026-11-09 UTC"
+      "liquidity": 14.19,
+      "barTime": "2026-11-10 UTC"
     },
     {
       "symbol": "ETH",
       "name": "Ethereum",
       "market": "BINANCE.F ETHUSDT",
       "assetClass": "crypto",
-      "price": 2119.26,
-      "oscillator": 23.96,
-      "arrow": null,
-      "liquidity": 7.29,
-      "barTime": "2026-11-09 UTC"
+      "price": 2090.33,
+      "oscillator": 23.35,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 0
+      },
+      "liquidity": 7.95,
+      "barTime": "2026-11-10 UTC"
     },
     {
       "symbol": "USDT.D",
       "name": "Tether Dominance",
       "market": "CRYPTOCAP USDT.D",
       "assetClass": "crypto-index",
-      "price": 7.14,
-      "oscillator": 69.43,
+      "price": 7.2,
+      "oscillator": 70.27,
       "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-09 UTC"
+      "barTime": "2026-11-10 UTC"
     },
     {
       "symbol": "SOL",
       "name": "Solana",
       "market": "BINANCE.F SOLUSDT",
       "assetClass": "crypto",
-      "price": 86.06,
-      "oscillator": 13.77,
-      "arrow": null,
-      "liquidity": 5.74,
-      "barTime": "2026-11-09 UTC"
+      "price": 84.64,
+      "oscillator": 13.34,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 0
+      },
+      "liquidity": 4.3,
+      "barTime": "2026-11-10 UTC"
     },
     {
       "symbol": "BNB",
       "name": "BNB",
       "market": "BINANCE.F BNBUSDT",
       "assetClass": "crypto",
-      "price": 690.06,
-      "oscillator": 30.47,
+      "price": 688.25,
+      "oscillator": 29.85,
       "arrow": null,
-      "liquidity": 2.77,
-      "barTime": "2026-11-09 UTC"
+      "liquidity": 4.26,
+      "barTime": "2026-11-10 UTC"
     },
     {
       "symbol": "HYPE",
       "name": "Hyperliquid",
       "market": "BINANCE.F HYPEUSDT",
       "assetClass": "crypto",
-      "price": 74.63,
-      "oscillator": 23.46,
+      "price": 73.732,
+      "oscillator": 22.97,
       "arrow": null,
-      "liquidity": 10.41,
-      "barTime": "2026-11-09 UTC"
+      "liquidity": 12.98,
+      "barTime": "2026-11-10 UTC"
     },
     {
       "symbol": "ZEC",
       "name": "Zcash",
       "market": "BINANCE.F ZECUSDT",
       "assetClass": "crypto",
-      "price": 1150.279,
-      "oscillator": 39.59,
+      "price": 1141.89,
+      "oscillator": 39.27,
       "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-09 UTC"
+      "barTime": "2026-11-10 UTC"
     },
     {
       "symbol": "SUI",
       "name": "Sui",
       "market": "BINANCE.F SUIUSDT",
       "assetClass": "crypto",
-      "price": 0.84,
-      "oscillator": 29.15,
+      "price": 0.8338,
+      "oscillator": 27.54,
       "arrow": null,
-      "liquidity": 10.13,
-      "barTime": "2026-11-09 UTC"
+      "liquidity": 11.65,
+      "barTime": "2026-11-10 UTC"
     },
     {
       "symbol": "DOGE",
       "name": "Dogecoin",
       "market": "BINANCE.F DOGEUSDT",
       "assetClass": "crypto",
-      "price": 0.07,
-      "oscillator": 20.55,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 0
-      },
-      "liquidity": 6.79,
-      "barTime": "2026-11-09 UTC"
+      "price": 0.06932,
+      "oscillator": 18.95,
+      "arrow": null,
+      "liquidity": 7.61,
+      "barTime": "2026-11-10 UTC"
     },
     {
       "symbol": "QQQ",
@@ -204,22 +207,22 @@
       "name": "Gold Spot",
       "market": "FX_OTC XAU/USD",
       "assetClass": "commodity",
-      "price": 4123.47,
-      "oscillator": 62.63,
+      "price": 4076.78,
+      "oscillator": 61.15,
       "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-09 UTC"
+      "barTime": "2026-11-10 UTC"
     },
     {
       "symbol": "XAG/USD",
       "name": "Silver Spot",
       "market": "FX_OTC XAG/USD",
       "assetClass": "commodity",
-      "price": 53.2,
-      "oscillator": 46.13,
+      "price": 52.3925,
+      "oscillator": 44.35,
       "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-09 UTC"
+      "barTime": "2026-11-10 UTC"
     },
     {
       "symbol": "CRCL",
@@ -237,11 +240,11 @@
       "name": "WTI Crude Oil",
       "market": "HYPERLIQUID_HIP3 CL-USDC",
       "assetClass": "commodity",
-      "price": 84.95,
-      "oscillator": 12.46,
+      "price": 84.36,
+      "oscillator": 12.31,
       "arrow": null,
-      "liquidity": 3,
-      "barTime": "2026-11-09 UTC"
+      "liquidity": 4.32,
+      "barTime": "2026-11-10 UTC"
     }
   ],
   "issues": []
