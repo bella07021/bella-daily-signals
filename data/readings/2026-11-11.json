@@ -1,0 +1,251 @@
+{
+  "date": "2026-11-11",
+  "capturedAt": "2026-11-11T01:33:10+08:00",
+  "timeframe": "1D",
+  "source": "OpenMarket shared chart bmhOD7gr",
+  "note": "北京时间 01:28–01:33 读取 Favorite 列表全部 20 个标的；列表未变化。每个标的切换后都重新固定为 1D，逐个放大核对最右侧日线背离箭头；ETH 与 SOL 为当日底背离，DOGE 当日无箭头；美股为 11 月 10 日盘中日线（延迟 15 分钟）。",
+  "symbols": [
+    {
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "market": "BINANCE.F BTCUSDT",
+      "assetClass": "crypto",
+      "price": 73025.4,
+      "oscillator": 23.63,
+      "arrow": null,
+      "liquidity": 13.65,
+      "barTime": "2026-11-10 UTC"
+    },
+    {
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "market": "BINANCE.F ETHUSDT",
+      "assetClass": "crypto",
+      "price": 2023.72,
+      "oscillator": 22.05,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 0
+      },
+      "liquidity": 10.1,
+      "barTime": "2026-11-10 UTC"
+    },
+    {
+      "symbol": "USDT.D",
+      "name": "Tether Dominance",
+      "market": "CRYPTOCAP USDT.D",
+      "assetClass": "crypto-index",
+      "price": 7.33,
+      "oscillator": 72.01,
+      "arrow": null,
+      "liquidity": null,
+      "barTime": "2026-11-10 UTC"
+    },
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "market": "BINANCE.F SOLUSDT",
+      "assetClass": "crypto",
+      "price": 82.39,
+      "oscillator": 12.72,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 0
+      },
+      "liquidity": 6.05,
+      "barTime": "2026-11-10 UTC"
+    },
+    {
+      "symbol": "BNB",
+      "name": "BNB",
+      "market": "BINANCE.F BNBUSDT",
+      "assetClass": "crypto",
+      "price": 673.6,
+      "oscillator": 27.34,
+      "arrow": null,
+      "liquidity": 6.06,
+      "barTime": "2026-11-10 UTC"
+    },
+    {
+      "symbol": "HYPE",
+      "name": "Hyperliquid",
+      "market": "BINANCE.F HYPEUSDT",
+      "assetClass": "crypto",
+      "price": 71.087,
+      "oscillator": 21.92,
+      "arrow": null,
+      "liquidity": 12.08,
+      "barTime": "2026-11-10 UTC"
+    },
+    {
+      "symbol": "ZEC",
+      "name": "Zcash",
+      "market": "BINANCE.F ZECUSDT",
+      "assetClass": "crypto",
+      "price": 1029,
+      "oscillator": 35.62,
+      "arrow": null,
+      "liquidity": null,
+      "barTime": "2026-11-10 UTC"
+    },
+    {
+      "symbol": "SUI",
+      "name": "Sui",
+      "market": "BINANCE.F SUIUSDT",
+      "assetClass": "crypto",
+      "price": 0.8107,
+      "oscillator": 25.21,
+      "arrow": null,
+      "liquidity": 13.71,
+      "barTime": "2026-11-10 UTC"
+    },
+    {
+      "symbol": "DOGE",
+      "name": "Dogecoin",
+      "market": "BINANCE.F DOGEUSDT",
+      "assetClass": "crypto",
+      "price": 0.06724,
+      "oscillator": 17.18,
+      "arrow": null,
+      "liquidity": 6.2,
+      "barTime": "2026-11-10 UTC"
+    },
+    {
+      "symbol": "QQQ",
+      "name": "Invesco QQQ Trust",
+      "market": "US Equities QQQ",
+      "assetClass": "stock",
+      "price": 670.92,
+      "oscillator": 31.13,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 0
+      },
+      "liquidity": null,
+      "barTime": "2026-11-10 US live (delayed 15m)"
+    },
+    {
+      "symbol": "SOXL",
+      "name": "Direxion Daily Semiconductor Bull 3X",
+      "market": "NYSE ARCA SOXL",
+      "assetClass": "stock",
+      "price": 53.35,
+      "oscillator": 24,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 0
+      },
+      "liquidity": null,
+      "barTime": "2026-11-10 US live (delayed 15m)"
+    },
+    {
+      "symbol": "SNDK",
+      "name": "Sandisk",
+      "market": "NASDAQ SNDK",
+      "assetClass": "stock",
+      "price": 839.56,
+      "oscillator": 15.63,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 0
+      },
+      "liquidity": null,
+      "barTime": "2026-11-10 US live (delayed 15m)"
+    },
+    {
+      "symbol": "MU",
+      "name": "Micron",
+      "market": "NASDAQ MU",
+      "assetClass": "stock",
+      "price": 708.4,
+      "oscillator": 22.87,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 0
+      },
+      "liquidity": null,
+      "barTime": "2026-11-10 US live (delayed 15m)"
+    },
+    {
+      "symbol": "SKHY",
+      "name": "SK hynix ADR",
+      "market": "NASDAQ SKHY",
+      "assetClass": "stock",
+      "price": 128.67,
+      "oscillator": 33.21,
+      "arrow": null,
+      "liquidity": null,
+      "barTime": "2026-11-10 US live (delayed 15m)"
+    },
+    {
+      "symbol": "GOOGL",
+      "name": "Alphabet Inc.",
+      "market": "NASDAQ GOOGL",
+      "assetClass": "stock",
+      "price": 286.91,
+      "oscillator": 24.82,
+      "arrow": null,
+      "liquidity": null,
+      "barTime": "2026-11-10 US live (delayed 15m)"
+    },
+    {
+      "symbol": "INTC",
+      "name": "Intel Corporation",
+      "market": "NASDAQ INTC",
+      "assetClass": "stock",
+      "price": 57.28,
+      "oscillator": 17.36,
+      "arrow": {
+        "type": "bullish",
+        "barsAgo": 0
+      },
+      "liquidity": null,
+      "barTime": "2026-11-10 US live (delayed 15m)"
+    },
+    {
+      "symbol": "XAU/USD",
+      "name": "Gold Spot",
+      "market": "FX_OTC XAU/USD",
+      "assetClass": "commodity",
+      "price": 4021.08,
+      "oscillator": 58.52,
+      "arrow": null,
+      "liquidity": null,
+      "barTime": "2026-11-10 UTC"
+    },
+    {
+      "symbol": "XAG/USD",
+      "name": "Silver Spot",
+      "market": "FX_OTC XAG/USD",
+      "assetClass": "commodity",
+      "price": 51.2729,
+      "oscillator": 42.13,
+      "arrow": null,
+      "liquidity": null,
+      "barTime": "2026-11-10 UTC"
+    },
+    {
+      "symbol": "CRCL",
+      "name": "Circle",
+      "market": "NYSE CRCL",
+      "assetClass": "stock",
+      "price": 64.14,
+      "oscillator": 20.8,
+      "arrow": null,
+      "liquidity": null,
+      "barTime": "2026-11-10 US live (delayed 15m)"
+    },
+    {
+      "symbol": "CL",
+      "name": "WTI Crude Oil",
+      "market": "HYPERLIQUID_HIP3 CL-USDC",
+      "assetClass": "commodity",
+      "price": 85.774,
+      "oscillator": 12.66,
+      "arrow": null,
+      "liquidity": 4.96,
+      "barTime": "2026-11-10 UTC"
+    }
+  ],
+  "issues": []
+}

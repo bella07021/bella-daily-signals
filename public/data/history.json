@@ -213,5 +213,110 @@
         "price": 1183.7
       }
     }
+  },
+  {
+    "date": "2026-11-11",
+    "values": {
+      "INTC": {
+        "index": 73,
+        "direction": "long",
+        "price": 57.28
+      },
+      "SNDK": {
+        "index": 73,
+        "direction": "long",
+        "price": 839.56
+      },
+      "SOL": {
+        "index": 55,
+        "direction": "long",
+        "price": 82.39
+      },
+      "ETH": {
+        "index": 45,
+        "direction": "long",
+        "price": 2023.72
+      },
+      "MU": {
+        "index": 44,
+        "direction": "long",
+        "price": 708.4
+      },
+      "QQQ": {
+        "index": 44,
+        "direction": "long",
+        "price": 670.92
+      },
+      "SOXL": {
+        "index": 44,
+        "direction": "long",
+        "price": 53.35
+      },
+      "CL": {
+        "index": 25,
+        "direction": "wait",
+        "price": 85.774
+      },
+      "DOGE": {
+        "index": 25,
+        "direction": "wait",
+        "price": 0.06724
+      },
+      "BTC": {
+        "index": 15,
+        "direction": "wait",
+        "price": 73025.4
+      },
+      "HYPE": {
+        "index": 15,
+        "direction": "wait",
+        "price": 71.087
+      },
+      "SUI": {
+        "index": 15,
+        "direction": "wait",
+        "price": 0.8107
+      },
+      "BNB": {
+        "index": 5,
+        "direction": "wait",
+        "price": 673.6
+      },
+      "CRCL": {
+        "index": 0,
+        "direction": "wait",
+        "price": 64.14
+      },
+      "GOOGL": {
+        "index": 0,
+        "direction": "wait",
+        "price": 286.91
+      },
+      "SKHY": {
+        "index": 0,
+        "direction": "wait",
+        "price": 128.67
+      },
+      "USDT.D": {
+        "index": 0,
+        "direction": "wait",
+        "price": 7.33
+      },
+      "XAG/USD": {
+        "index": 0,
+        "direction": "wait",
+        "price": 51.2729
+      },
+      "XAU/USD": {
+        "index": 0,
+        "direction": "wait",
+        "price": 4021.08
+      },
+      "ZEC": {
+        "index": 0,
+        "direction": "wait",
+        "price": 1029
+      }
+    }
   }
 ]
