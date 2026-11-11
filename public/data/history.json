@@ -230,12 +230,12 @@
       "ETH": {
         "index": 55,
         "direction": "long",
-        "price": 2065
+        "price": 2062.88
       },
       "SOL": {
         "index": 55,
         "direction": "long",
-        "price": 83.1
+        "price": 83.87
       },
       "MU": {
         "index": 44,
@@ -255,32 +255,32 @@
       "HYPE": {
         "index": 35,
         "direction": "long",
-        "price": 71.964
+        "price": 72.753
       },
       "BTC": {
         "index": 30,
         "direction": "long",
-        "price": 73811.3
+        "price": 74054.2
       },
       "CL": {
         "index": 25,
         "direction": "wait",
-        "price": 85.896
+        "price": 86.485
       },
       "DOGE": {
         "index": 25,
         "direction": "wait",
-        "price": 0.068
+        "price": 0.0683
       },
       "SUI": {
         "index": 15,
         "direction": "wait",
-        "price": 0.8236
+        "price": 0.8323
       },
       "BNB": {
         "index": 5,
         "direction": "wait",
-        "price": 680.36
+        "price": 682.04
       },
       "CRCL": {
         "index": 0,
@@ -300,22 +300,22 @@
       "USDT.D": {
         "index": 0,
         "direction": "wait",
-        "price": 7.21
+        "price": 7.19
       },
       "XAG/USD": {
         "index": 0,
         "direction": "wait",
-        "price": 52.9901
+        "price": 52.91
       },
       "XAU/USD": {
         "index": 0,
         "direction": "wait",
-        "price": 4055.05
+        "price": 4047.21
       },
       "ZEC": {
         "index": 0,
         "direction": "wait",
-        "price": 1002.96
+        "price": 996.17
       }
     }
   }
