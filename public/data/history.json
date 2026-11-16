@@ -318,5 +318,115 @@
         "price": 996.17
       }
     }
+  },
+  {
+    "date": "2026-11-16",
+    "values": {
+      "SUI": {
+        "index": 73,
+        "direction": "long",
+        "price": 0.7276
+      },
+      "INTC": {
+        "index": 44,
+        "direction": "long",
+        "price": 59.66
+      },
+      "MU": {
+        "index": 44,
+        "direction": "long",
+        "price": 778.31
+      },
+      "QQQ": {
+        "index": 44,
+        "direction": "long",
+        "price": 679.89
+      },
+      "SNDK": {
+        "index": 44,
+        "direction": "long",
+        "price": 885.01
+      },
+      "SOXL": {
+        "index": 44,
+        "direction": "long",
+        "price": 58.32
+      },
+      "DOGE": {
+        "index": 40,
+        "direction": "long",
+        "price": 0.05892
+      },
+      "NVDA": {
+        "index": 36,
+        "direction": "long",
+        "price": 162.85
+      },
+      "USDT.D": {
+        "index": 36,
+        "direction": "short",
+        "price": 8.03
+      },
+      "BNB": {
+        "index": 30,
+        "direction": "long",
+        "price": 592.62
+      },
+      "SOL": {
+        "index": 30,
+        "direction": "long",
+        "price": 71.84
+      },
+      "CRCL": {
+        "index": 29,
+        "direction": "wait",
+        "price": 62.2
+      },
+      "ZEC": {
+        "index": 29,
+        "direction": "wait",
+        "price": 891.34
+      },
+      "BTC": {
+        "index": 25,
+        "direction": "wait",
+        "price": 64951.9
+      },
+      "ETH": {
+        "index": 25,
+        "direction": "wait",
+        "price": 1820.99
+      },
+      "HYPE": {
+        "index": 25,
+        "direction": "wait",
+        "price": 66.395
+      },
+      "CL": {
+        "index": 5,
+        "direction": "wait",
+        "price": 87.048
+      },
+      "GOOGL": {
+        "index": 0,
+        "direction": "wait",
+        "price": 295.77
+      },
+      "SKHY": {
+        "index": 0,
+        "direction": "wait",
+        "price": 131.79
+      },
+      "XAG/USD": {
+        "index": 0,
+        "direction": "wait",
+        "price": 47.5006
+      },
+      "XAU/USD": {
+        "index": 0,
+        "direction": "wait",
+        "price": 3871.82
+      }
+    }
   }
 ]
