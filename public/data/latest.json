@@ -1,585 +1,254 @@
 {
-  "date": "2026-11-16",
-  "capturedAt": "2026-11-16T12:14:22+08:00",
+  "date": "2026-11-18",
+  "capturedAt": "2026-11-18T12:10:01+08:00",
   "timeframe": "1D",
   "source": "OpenMarket shared chart bmhOD7gr",
-  "note": "北京时间 12:02–12:14 读取 Favorite 列表全部 21 个标的；相比上次快照新增 NVDA。每个标的切换后都重新固定为 1D，并核对最右侧日线实体背离箭头；当日底背离为 SUI、QQQ、SOXL、SNDK、MU 和 INTC。美股为 11 月 13 日已收盘日线。",
+  "note": "北京时间 12:00–12:10 读取 favorite 全部 21 个标的（crypto overview 1、crypto 8、美股 8、未分区 4），与上次已发布快照一致。逐个重新选择 1D 并核对图表最右侧：今天最新日线没有实体背离箭头，SUI 和多只美股的蓝色箭头属于历史日线。美股价格使用 1D 图表收盘价；该页面的 watchlist 报价与图表收盘价存在差异。美股日线对应 11 月 17 日收盘。",
   "symbols": [
     {
       "symbol": "USDT.D",
       "name": "Tether Dominance",
       "market": "CRYPTOCAP USDT.D",
       "assetClass": "crypto-index",
-      "price": 8.03,
-      "oscillator": 91.9,
+      "price": 8.06,
+      "oscillator": 91.06,
       "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-16 UTC"
+      "barTime": "2026-11-18 UTC"
     },
     {
       "symbol": "BTC",
       "name": "Bitcoin",
       "market": "BINANCE.F BTCUSDT",
       "assetClass": "crypto",
-      "price": 64951.9,
-      "oscillator": 6.42,
+      "price": 64396.6,
+      "oscillator": 6.5,
       "arrow": null,
-      "liquidity": -1.75,
-      "barTime": "2026-11-16 UTC"
+      "liquidity": -2.25,
+      "barTime": "2026-11-18 UTC"
     },
     {
       "symbol": "ETH",
       "name": "Ethereum",
       "market": "BINANCE.F ETHUSDT",
       "assetClass": "crypto",
-      "price": 1820.99,
-      "oscillator": 8.82,
+      "price": 1803.33,
+      "oscillator": 10.38,
       "arrow": null,
-      "liquidity": -0.45,
-      "barTime": "2026-11-16 UTC"
+      "liquidity": -1.14,
+      "barTime": "2026-11-18 UTC"
     },
     {
       "symbol": "SOL",
       "name": "Solana",
       "market": "BINANCE.F SOLUSDT",
       "assetClass": "crypto",
-      "price": 71.84,
-      "oscillator": 5.48,
+      "price": 74.71,
+      "oscillator": 16.23,
       "arrow": null,
-      "liquidity": 3.6,
-      "barTime": "2026-11-16 UTC"
+      "liquidity": 3.11,
+      "barTime": "2026-11-18 UTC"
     },
     {
       "symbol": "BNB",
       "name": "BNB",
       "market": "BINANCE.F BNBUSDT",
       "assetClass": "crypto",
-      "price": 592.62,
-      "oscillator": 7.41,
+      "price": 592.12,
+      "oscillator": 8.51,
       "arrow": null,
-      "liquidity": 5.12,
-      "barTime": "2026-11-16 UTC"
+      "liquidity": 6.71,
+      "barTime": "2026-11-18 UTC"
     },
     {
       "symbol": "HYPE",
       "name": "Hyperliquid",
       "market": "BINANCE.F HYPEUSDT",
       "assetClass": "crypto",
-      "price": 66.395,
-      "oscillator": 12.53,
+      "price": 68.601,
+      "oscillator": 28.21,
       "arrow": null,
-      "liquidity": 7.54,
-      "barTime": "2026-11-16 UTC"
+      "liquidity": 16.68,
+      "barTime": "2026-11-18 UTC"
     },
     {
       "symbol": "ZEC",
       "name": "Zcash",
       "market": "BINANCE.F ZECUSDT",
       "assetClass": "crypto",
-      "price": 891.34,
-      "oscillator": 12.67,
+      "price": 951.89,
+      "oscillator": 24.31,
       "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-16 UTC"
+      "barTime": "2026-11-18 UTC"
     },
     {
       "symbol": "SUI",
       "name": "Sui",
       "market": "BINANCE.F SUIUSDT",
       "assetClass": "crypto",
-      "price": 0.7276,
-      "oscillator": 12.53,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 0
-      },
-      "liquidity": null,
-      "barTime": "2026-11-16 UTC"
+      "price": 0.7288,
+      "oscillator": 14.34,
+      "arrow": null,
+      "liquidity": 10.42,
+      "barTime": "2026-11-18 UTC"
     },
     {
       "symbol": "DOGE",
       "name": "Dogecoin",
       "market": "BINANCE.F DOGEUSDT",
       "assetClass": "crypto",
-      "price": 0.05892,
-      "oscillator": 7.17,
+      "price": 0.05929,
+      "oscillator": 10.57,
       "arrow": null,
-      "liquidity": 10.33,
-      "barTime": "2026-11-16 UTC"
+      "liquidity": 8.03,
+      "barTime": "2026-11-18 UTC"
     },
     {
       "symbol": "QQQ",
       "name": "Invesco QQQ Trust",
       "market": "NASDAQ QQQ",
       "assetClass": "stock",
-      "price": 679.89,
-      "oscillator": 45.83,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 0
-      },
+      "price": 656.95,
+      "oscillator": 38.81,
+      "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-13 US close (delayed 15m)"
+      "barTime": "2026-11-17 US close (delayed 15m)"
     },
     {
       "symbol": "NVDA",
       "name": "NVIDIA Corporation",
       "market": "NASDAQ NVDA",
       "assetClass": "stock",
-      "price": 162.85,
-      "oscillator": 4.48,
+      "price": 155.46,
+      "oscillator": 2.93,
       "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-13 US close (delayed 15m)"
+      "barTime": "2026-11-17 US close (delayed 15m)"
     },
     {
       "symbol": "SOXL",
       "name": "Direxion Daily Semiconductor Bull 3X",
       "market": "NYSE ARCA SOXL",
       "assetClass": "stock",
-      "price": 58.32,
-      "oscillator": 39.04,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 0
-      },
+      "price": 49.07,
+      "oscillator": 35.25,
+      "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-13 US close (delayed 15m)"
+      "barTime": "2026-11-17 US close (delayed 15m)"
     },
     {
       "symbol": "SNDK",
       "name": "Sandisk",
       "market": "NASDAQ SNDK",
       "assetClass": "stock",
-      "price": 885.01,
-      "oscillator": 30.03,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 0
-      },
+      "price": 797.24,
+      "oscillator": 27.41,
+      "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-13 US close (delayed 15m)"
+      "barTime": "2026-11-17 US close (delayed 15m)"
     },
     {
       "symbol": "MU",
       "name": "Micron",
       "market": "NASDAQ MU",
       "assetClass": "stock",
-      "price": 778.31,
-      "oscillator": 45.42,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 0
-      },
+      "price": 712.42,
+      "oscillator": 40.85,
+      "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-13 US close (delayed 15m)"
+      "barTime": "2026-11-17 US close (delayed 15m)"
     },
     {
       "symbol": "SKHY",
       "name": "SK hynix ADR",
       "market": "NASDAQ SKHY",
       "assetClass": "stock",
-      "price": 131.79,
-      "oscillator": 42.06,
+      "price": 122.61,
+      "oscillator": 34.4,
       "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-13 US close (delayed 15m)"
+      "barTime": "2026-11-17 US close (delayed 15m)"
     },
     {
       "symbol": "GOOGL",
       "name": "Alphabet Inc.",
       "market": "NASDAQ GOOGL",
       "assetClass": "stock",
-      "price": 295.77,
-      "oscillator": 47.08,
+      "price": 280.2,
+      "oscillator": 39.79,
       "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-13 US close (delayed 15m)"
+      "barTime": "2026-11-17 US close (delayed 15m)"
     },
     {
       "symbol": "INTC",
       "name": "Intel Corporation",
       "market": "NASDAQ INTC",
       "assetClass": "stock",
-      "price": 59.66,
-      "oscillator": 30.13,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 0
-      },
+      "price": 55.17,
+      "oscillator": 28.59,
+      "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-13 US close (delayed 15m)"
+      "barTime": "2026-11-17 US close (delayed 15m)"
     },
     {
       "symbol": "XAU/USD",
       "name": "Gold Spot",
       "market": "FX_OTC XAU/USD",
       "assetClass": "commodity",
-      "price": 3871.82,
-      "oscillator": 31.31,
+      "price": 3784.43,
+      "oscillator": 23.68,
       "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-16 UTC"
+      "barTime": "2026-11-18 UTC"
     },
     {
       "symbol": "XAG/USD",
       "name": "Silver Spot",
       "market": "FX_OTC XAG/USD",
       "assetClass": "commodity",
-      "price": 47.5006,
-      "oscillator": 26.3,
+      "price": 45.9075,
+      "oscillator": 17.61,
       "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-16 UTC"
+      "barTime": "2026-11-18 UTC"
     },
     {
       "symbol": "CRCL",
       "name": "Circle",
       "market": "NYSE CRCL",
       "assetClass": "stock",
-      "price": 62.2,
-      "oscillator": 15.79,
+      "price": 54.63,
+      "oscillator": 9.87,
       "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-13 US close (delayed 15m)"
+      "barTime": "2026-11-17 US close (delayed 15m)"
     },
     {
       "symbol": "CL",
       "name": "WTI Crude Oil",
       "market": "HYPERLIQUID_HIP3 CL-USDC",
       "assetClass": "commodity",
-      "price": 87.048,
-      "oscillator": 28.57,
+      "price": 83.737,
+      "oscillator": 22.08,
       "arrow": null,
-      "liquidity": -7.06,
-      "barTime": "2026-11-16 UTC"
+      "liquidity": 4.17,
+      "barTime": "2026-11-18 UTC"
     }
   ],
   "issues": [],
   "rows": [
     {
-      "symbol": "SUI",
-      "name": "Sui",
-      "market": "BINANCE.F SUIUSDT",
-      "assetClass": "crypto",
-      "price": 0.7276,
-      "oscillator": 12.53,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 0
-      },
-      "liquidity": null,
-      "barTime": "2026-11-16 UTC",
-      "result": {
-        "index": 73,
-        "long": 73,
-        "short": 0,
-        "bias": "long",
-        "direction": "long",
-        "tier": "entry",
-        "tierLabel": "推荐进场",
-        "signals": {
-          "oscillator": {
-            "side": "long",
-            "points": 20,
-            "label": "超卖"
-          },
-          "divergence": {
-            "side": "long",
-            "points": 30,
-            "label": "当日底背离",
-            "active": true
-          },
-          "liquidity": {
-            "side": null,
-            "points": 0,
-            "penalty": 0,
-            "label": "无此指标",
-            "available": false
-          }
-        },
-        "capped": true
-      },
-      "reason": "超卖 12.53，当日底背离箭头，缺少流动性确认"
-    },
-    {
-      "symbol": "INTC",
-      "name": "Intel Corporation",
-      "market": "NASDAQ INTC",
+      "symbol": "CRCL",
+      "name": "Circle",
+      "market": "NYSE CRCL",
       "assetClass": "stock",
-      "price": 59.66,
-      "oscillator": 30.13,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 0
-      },
-      "liquidity": null,
-      "barTime": "2026-11-13 US close (delayed 15m)",
-      "result": {
-        "index": 44,
-        "long": 44,
-        "short": 0,
-        "bias": "long",
-        "direction": "long",
-        "tier": "watch",
-        "tierLabel": "观察",
-        "signals": {
-          "oscillator": {
-            "side": null,
-            "points": 0,
-            "label": "中性"
-          },
-          "divergence": {
-            "side": "long",
-            "points": 30,
-            "label": "当日底背离",
-            "active": true
-          },
-          "liquidity": {
-            "side": null,
-            "points": 0,
-            "penalty": 0,
-            "label": "无此指标",
-            "available": false
-          }
-        },
-        "capped": true
-      },
-      "reason": "当日底背离箭头，缺少流动性确认"
-    },
-    {
-      "symbol": "MU",
-      "name": "Micron",
-      "market": "NASDAQ MU",
-      "assetClass": "stock",
-      "price": 778.31,
-      "oscillator": 45.42,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 0
-      },
-      "liquidity": null,
-      "barTime": "2026-11-13 US close (delayed 15m)",
-      "result": {
-        "index": 44,
-        "long": 44,
-        "short": 0,
-        "bias": "long",
-        "direction": "long",
-        "tier": "watch",
-        "tierLabel": "观察",
-        "signals": {
-          "oscillator": {
-            "side": null,
-            "points": 0,
-            "label": "中性"
-          },
-          "divergence": {
-            "side": "long",
-            "points": 30,
-            "label": "当日底背离",
-            "active": true
-          },
-          "liquidity": {
-            "side": null,
-            "points": 0,
-            "penalty": 0,
-            "label": "无此指标",
-            "available": false
-          }
-        },
-        "capped": true
-      },
-      "reason": "当日底背离箭头，缺少流动性确认"
-    },
-    {
-      "symbol": "QQQ",
-      "name": "Invesco QQQ Trust",
-      "market": "NASDAQ QQQ",
-      "assetClass": "stock",
-      "price": 679.89,
-      "oscillator": 45.83,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 0
-      },
-      "liquidity": null,
-      "barTime": "2026-11-13 US close (delayed 15m)",
-      "result": {
-        "index": 44,
-        "long": 44,
-        "short": 0,
-        "bias": "long",
-        "direction": "long",
-        "tier": "watch",
-        "tierLabel": "观察",
-        "signals": {
-          "oscillator": {
-            "side": null,
-            "points": 0,
-            "label": "中性"
-          },
-          "divergence": {
-            "side": "long",
-            "points": 30,
-            "label": "当日底背离",
-            "active": true
-          },
-          "liquidity": {
-            "side": null,
-            "points": 0,
-            "penalty": 0,
-            "label": "无此指标",
-            "available": false
-          }
-        },
-        "capped": true
-      },
-      "reason": "当日底背离箭头，缺少流动性确认"
-    },
-    {
-      "symbol": "SNDK",
-      "name": "Sandisk",
-      "market": "NASDAQ SNDK",
-      "assetClass": "stock",
-      "price": 885.01,
-      "oscillator": 30.03,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 0
-      },
-      "liquidity": null,
-      "barTime": "2026-11-13 US close (delayed 15m)",
-      "result": {
-        "index": 44,
-        "long": 44,
-        "short": 0,
-        "bias": "long",
-        "direction": "long",
-        "tier": "watch",
-        "tierLabel": "观察",
-        "signals": {
-          "oscillator": {
-            "side": null,
-            "points": 0,
-            "label": "中性"
-          },
-          "divergence": {
-            "side": "long",
-            "points": 30,
-            "label": "当日底背离",
-            "active": true
-          },
-          "liquidity": {
-            "side": null,
-            "points": 0,
-            "penalty": 0,
-            "label": "无此指标",
-            "available": false
-          }
-        },
-        "capped": true
-      },
-      "reason": "当日底背离箭头，缺少流动性确认"
-    },
-    {
-      "symbol": "SOXL",
-      "name": "Direxion Daily Semiconductor Bull 3X",
-      "market": "NYSE ARCA SOXL",
-      "assetClass": "stock",
-      "price": 58.32,
-      "oscillator": 39.04,
-      "arrow": {
-        "type": "bullish",
-        "barsAgo": 0
-      },
-      "liquidity": null,
-      "barTime": "2026-11-13 US close (delayed 15m)",
-      "result": {
-        "index": 44,
-        "long": 44,
-        "short": 0,
-        "bias": "long",
-        "direction": "long",
-        "tier": "watch",
-        "tierLabel": "观察",
-        "signals": {
-          "oscillator": {
-            "side": null,
-            "points": 0,
-            "label": "中性"
-          },
-          "divergence": {
-            "side": "long",
-            "points": 30,
-            "label": "当日底背离",
-            "active": true
-          },
-          "liquidity": {
-            "side": null,
-            "points": 0,
-            "penalty": 0,
-            "label": "无此指标",
-            "available": false
-          }
-        },
-        "capped": true
-      },
-      "reason": "当日底背离箭头，缺少流动性确认"
-    },
-    {
-      "symbol": "DOGE",
-      "name": "Dogecoin",
-      "market": "BINANCE.F DOGEUSDT",
-      "assetClass": "crypto",
-      "price": 0.05892,
-      "oscillator": 7.17,
-      "arrow": null,
-      "liquidity": 10.33,
-      "barTime": "2026-11-16 UTC",
-      "result": {
-        "index": 40,
-        "long": 40,
-        "short": 0,
-        "bias": "long",
-        "direction": "long",
-        "tier": "watch",
-        "tierLabel": "观察",
-        "signals": {
-          "oscillator": {
-            "side": "long",
-            "points": 25,
-            "label": "深度超卖"
-          },
-          "divergence": {
-            "side": null,
-            "points": 0,
-            "label": "无箭头",
-            "active": false
-          },
-          "liquidity": {
-            "side": "long",
-            "points": 15,
-            "penalty": 0,
-            "label": "买方中等",
-            "strength": "medium",
-            "available": true
-          }
-        },
-        "capped": false
-      },
-      "reason": "深度超卖 7.17，流动性 +10.33（买方中等）"
-    },
-    {
-      "symbol": "NVDA",
-      "name": "NVIDIA Corporation",
-      "market": "NASDAQ NVDA",
-      "assetClass": "stock",
-      "price": 162.85,
-      "oscillator": 4.48,
+      "price": 54.63,
+      "oscillator": 9.87,
       "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-13 US close (delayed 15m)",
+      "barTime": "2026-11-17 US close (delayed 15m)",
       "result": {
         "index": 36,
         "long": 36,
@@ -610,18 +279,60 @@
         },
         "capped": true
       },
-      "reason": "深度超卖 4.48，缺少流动性确认"
+      "reason": "深度超卖 9.87，缺少流动性确认"
+    },
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA Corporation",
+      "market": "NASDAQ NVDA",
+      "assetClass": "stock",
+      "price": 155.46,
+      "oscillator": 2.93,
+      "arrow": null,
+      "liquidity": null,
+      "barTime": "2026-11-17 US close (delayed 15m)",
+      "result": {
+        "index": 36,
+        "long": 36,
+        "short": 0,
+        "bias": "long",
+        "direction": "long",
+        "tier": "watch",
+        "tierLabel": "观察",
+        "signals": {
+          "oscillator": {
+            "side": "long",
+            "points": 25,
+            "label": "深度超卖"
+          },
+          "divergence": {
+            "side": null,
+            "points": 0,
+            "label": "无箭头",
+            "active": false
+          },
+          "liquidity": {
+            "side": null,
+            "points": 0,
+            "penalty": 0,
+            "label": "无此指标",
+            "available": false
+          }
+        },
+        "capped": true
+      },
+      "reason": "深度超卖 2.93，缺少流动性确认"
     },
     {
       "symbol": "USDT.D",
       "name": "Tether Dominance",
       "market": "CRYPTOCAP USDT.D",
       "assetClass": "crypto-index",
-      "price": 8.03,
-      "oscillator": 91.9,
+      "price": 8.06,
+      "oscillator": 91.06,
       "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-16 UTC",
+      "barTime": "2026-11-18 UTC",
       "result": {
         "index": 36,
         "long": 0,
@@ -652,18 +363,61 @@
         },
         "capped": true
       },
-      "reason": "深度超买 91.90，缺少流动性确认"
+      "reason": "深度超买 91.06，缺少流动性确认"
+    },
+    {
+      "symbol": "SUI",
+      "name": "Sui",
+      "market": "BINANCE.F SUIUSDT",
+      "assetClass": "crypto",
+      "price": 0.7288,
+      "oscillator": 14.34,
+      "arrow": null,
+      "liquidity": 10.42,
+      "barTime": "2026-11-18 UTC",
+      "result": {
+        "index": 35,
+        "long": 35,
+        "short": 0,
+        "bias": "long",
+        "direction": "long",
+        "tier": "watch",
+        "tierLabel": "观察",
+        "signals": {
+          "oscillator": {
+            "side": "long",
+            "points": 20,
+            "label": "超卖"
+          },
+          "divergence": {
+            "side": null,
+            "points": 0,
+            "label": "无箭头",
+            "active": false
+          },
+          "liquidity": {
+            "side": "long",
+            "points": 15,
+            "penalty": 0,
+            "label": "买方中等",
+            "strength": "medium",
+            "available": true
+          }
+        },
+        "capped": false
+      },
+      "reason": "超卖 14.34，流动性 +10.42（买方中等）"
     },
     {
       "symbol": "BNB",
       "name": "BNB",
       "market": "BINANCE.F BNBUSDT",
       "assetClass": "crypto",
-      "price": 592.62,
-      "oscillator": 7.41,
+      "price": 592.12,
+      "oscillator": 8.51,
       "arrow": null,
-      "liquidity": 5.12,
-      "barTime": "2026-11-16 UTC",
+      "liquidity": 6.71,
+      "barTime": "2026-11-18 UTC",
       "result": {
         "index": 30,
         "long": 30,
@@ -695,231 +449,146 @@
         },
         "capped": false
       },
-      "reason": "深度超卖 7.41，流动性 +5.12（买方弱）"
-    },
-    {
-      "symbol": "SOL",
-      "name": "Solana",
-      "market": "BINANCE.F SOLUSDT",
-      "assetClass": "crypto",
-      "price": 71.84,
-      "oscillator": 5.48,
-      "arrow": null,
-      "liquidity": 3.6,
-      "barTime": "2026-11-16 UTC",
-      "result": {
-        "index": 30,
-        "long": 30,
-        "short": 0,
-        "bias": "long",
-        "direction": "long",
-        "tier": "watch",
-        "tierLabel": "观察",
-        "signals": {
-          "oscillator": {
-            "side": "long",
-            "points": 25,
-            "label": "深度超卖"
-          },
-          "divergence": {
-            "side": null,
-            "points": 0,
-            "label": "无箭头",
-            "active": false
-          },
-          "liquidity": {
-            "side": "long",
-            "points": 5,
-            "penalty": 0,
-            "label": "买方弱",
-            "strength": "weak",
-            "available": true
-          }
-        },
-        "capped": false
-      },
-      "reason": "深度超卖 5.48，流动性 +3.60（买方弱）"
-    },
-    {
-      "symbol": "CRCL",
-      "name": "Circle",
-      "market": "NYSE CRCL",
-      "assetClass": "stock",
-      "price": 62.2,
-      "oscillator": 15.79,
-      "arrow": null,
-      "liquidity": null,
-      "barTime": "2026-11-13 US close (delayed 15m)",
-      "result": {
-        "index": 29,
-        "long": 29,
-        "short": 0,
-        "bias": "long",
-        "direction": "wait",
-        "tier": "none",
-        "tierLabel": "无信号",
-        "signals": {
-          "oscillator": {
-            "side": "long",
-            "points": 20,
-            "label": "超卖"
-          },
-          "divergence": {
-            "side": null,
-            "points": 0,
-            "label": "无箭头",
-            "active": false
-          },
-          "liquidity": {
-            "side": null,
-            "points": 0,
-            "penalty": 0,
-            "label": "无此指标",
-            "available": false
-          }
-        },
-        "capped": true
-      },
-      "reason": "超卖 15.79，缺少流动性确认"
-    },
-    {
-      "symbol": "ZEC",
-      "name": "Zcash",
-      "market": "BINANCE.F ZECUSDT",
-      "assetClass": "crypto",
-      "price": 891.34,
-      "oscillator": 12.67,
-      "arrow": null,
-      "liquidity": null,
-      "barTime": "2026-11-16 UTC",
-      "result": {
-        "index": 29,
-        "long": 29,
-        "short": 0,
-        "bias": "long",
-        "direction": "wait",
-        "tier": "none",
-        "tierLabel": "无信号",
-        "signals": {
-          "oscillator": {
-            "side": "long",
-            "points": 20,
-            "label": "超卖"
-          },
-          "divergence": {
-            "side": null,
-            "points": 0,
-            "label": "无箭头",
-            "active": false
-          },
-          "liquidity": {
-            "side": null,
-            "points": 0,
-            "penalty": 0,
-            "label": "无此指标",
-            "available": false
-          }
-        },
-        "capped": true
-      },
-      "reason": "超卖 12.67，缺少流动性确认"
-    },
-    {
-      "symbol": "BTC",
-      "name": "Bitcoin",
-      "market": "BINANCE.F BTCUSDT",
-      "assetClass": "crypto",
-      "price": 64951.9,
-      "oscillator": 6.42,
-      "arrow": null,
-      "liquidity": -1.75,
-      "barTime": "2026-11-16 UTC",
-      "result": {
-        "index": 25,
-        "long": 25,
-        "short": 5,
-        "bias": "long",
-        "direction": "wait",
-        "tier": "none",
-        "tierLabel": "无信号",
-        "signals": {
-          "oscillator": {
-            "side": "long",
-            "points": 25,
-            "label": "深度超卖"
-          },
-          "divergence": {
-            "side": null,
-            "points": 0,
-            "label": "无箭头",
-            "active": false
-          },
-          "liquidity": {
-            "side": "short",
-            "points": 5,
-            "penalty": 0,
-            "label": "卖方弱",
-            "strength": "weak",
-            "available": true
-          }
-        },
-        "capped": false
-      },
-      "reason": "深度超卖 6.42，流动性 -1.75（卖方弱）"
-    },
-    {
-      "symbol": "ETH",
-      "name": "Ethereum",
-      "market": "BINANCE.F ETHUSDT",
-      "assetClass": "crypto",
-      "price": 1820.99,
-      "oscillator": 8.82,
-      "arrow": null,
-      "liquidity": -0.45,
-      "barTime": "2026-11-16 UTC",
-      "result": {
-        "index": 25,
-        "long": 25,
-        "short": 5,
-        "bias": "long",
-        "direction": "wait",
-        "tier": "none",
-        "tierLabel": "无信号",
-        "signals": {
-          "oscillator": {
-            "side": "long",
-            "points": 25,
-            "label": "深度超卖"
-          },
-          "divergence": {
-            "side": null,
-            "points": 0,
-            "label": "无箭头",
-            "active": false
-          },
-          "liquidity": {
-            "side": "short",
-            "points": 5,
-            "penalty": 0,
-            "label": "卖方弱",
-            "strength": "weak",
-            "available": true
-          }
-        },
-        "capped": false
-      },
-      "reason": "深度超卖 8.82，流动性 -0.45（卖方弱）"
+      "reason": "深度超卖 8.51，流动性 +6.71（买方弱）"
     },
     {
       "symbol": "HYPE",
       "name": "Hyperliquid",
       "market": "BINANCE.F HYPEUSDT",
       "assetClass": "crypto",
-      "price": 66.395,
-      "oscillator": 12.53,
+      "price": 68.601,
+      "oscillator": 28.21,
       "arrow": null,
-      "liquidity": 7.54,
-      "barTime": "2026-11-16 UTC",
+      "liquidity": 16.68,
+      "barTime": "2026-11-18 UTC",
+      "result": {
+        "index": 30,
+        "long": 30,
+        "short": 0,
+        "bias": "long",
+        "direction": "long",
+        "tier": "watch",
+        "tierLabel": "观察",
+        "signals": {
+          "oscillator": {
+            "side": null,
+            "points": 0,
+            "label": "中性"
+          },
+          "divergence": {
+            "side": null,
+            "points": 0,
+            "label": "无箭头",
+            "active": false
+          },
+          "liquidity": {
+            "side": "long",
+            "points": 30,
+            "penalty": 20,
+            "label": "买方潜在机会",
+            "strength": "potential",
+            "available": true
+          }
+        },
+        "capped": false
+      },
+      "reason": "流动性 +16.68（买方潜在机会）"
+    },
+    {
+      "symbol": "XAG/USD",
+      "name": "Silver Spot",
+      "market": "FX_OTC XAG/USD",
+      "assetClass": "commodity",
+      "price": 45.9075,
+      "oscillator": 17.61,
+      "arrow": null,
+      "liquidity": null,
+      "barTime": "2026-11-18 UTC",
+      "result": {
+        "index": 29,
+        "long": 29,
+        "short": 0,
+        "bias": "long",
+        "direction": "wait",
+        "tier": "none",
+        "tierLabel": "无信号",
+        "signals": {
+          "oscillator": {
+            "side": "long",
+            "points": 20,
+            "label": "超卖"
+          },
+          "divergence": {
+            "side": null,
+            "points": 0,
+            "label": "无箭头",
+            "active": false
+          },
+          "liquidity": {
+            "side": null,
+            "points": 0,
+            "penalty": 0,
+            "label": "无此指标",
+            "available": false
+          }
+        },
+        "capped": true
+      },
+      "reason": "超卖 17.61，缺少流动性确认"
+    },
+    {
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "market": "BINANCE.F BTCUSDT",
+      "assetClass": "crypto",
+      "price": 64396.6,
+      "oscillator": 6.5,
+      "arrow": null,
+      "liquidity": -2.25,
+      "barTime": "2026-11-18 UTC",
+      "result": {
+        "index": 25,
+        "long": 25,
+        "short": 5,
+        "bias": "long",
+        "direction": "wait",
+        "tier": "none",
+        "tierLabel": "无信号",
+        "signals": {
+          "oscillator": {
+            "side": "long",
+            "points": 25,
+            "label": "深度超卖"
+          },
+          "divergence": {
+            "side": null,
+            "points": 0,
+            "label": "无箭头",
+            "active": false
+          },
+          "liquidity": {
+            "side": "short",
+            "points": 5,
+            "penalty": 0,
+            "label": "卖方弱",
+            "strength": "weak",
+            "available": true
+          }
+        },
+        "capped": false
+      },
+      "reason": "深度超卖 6.50，流动性 -2.25（卖方弱）"
+    },
+    {
+      "symbol": "DOGE",
+      "name": "Dogecoin",
+      "market": "BINANCE.F DOGEUSDT",
+      "assetClass": "crypto",
+      "price": 0.05929,
+      "oscillator": 10.57,
+      "arrow": null,
+      "liquidity": 8.03,
+      "barTime": "2026-11-18 UTC",
       "result": {
         "index": 25,
         "long": 25,
@@ -951,23 +620,109 @@
         },
         "capped": false
       },
-      "reason": "超卖 12.53，流动性 +7.54（买方弱）"
+      "reason": "超卖 10.57，流动性 +8.03（买方弱）"
+    },
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "market": "BINANCE.F SOLUSDT",
+      "assetClass": "crypto",
+      "price": 74.71,
+      "oscillator": 16.23,
+      "arrow": null,
+      "liquidity": 3.11,
+      "barTime": "2026-11-18 UTC",
+      "result": {
+        "index": 25,
+        "long": 25,
+        "short": 0,
+        "bias": "long",
+        "direction": "wait",
+        "tier": "none",
+        "tierLabel": "无信号",
+        "signals": {
+          "oscillator": {
+            "side": "long",
+            "points": 20,
+            "label": "超卖"
+          },
+          "divergence": {
+            "side": null,
+            "points": 0,
+            "label": "无箭头",
+            "active": false
+          },
+          "liquidity": {
+            "side": "long",
+            "points": 5,
+            "penalty": 0,
+            "label": "买方弱",
+            "strength": "weak",
+            "available": true
+          }
+        },
+        "capped": false
+      },
+      "reason": "超卖 16.23，流动性 +3.11（买方弱）"
+    },
+    {
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "market": "BINANCE.F ETHUSDT",
+      "assetClass": "crypto",
+      "price": 1803.33,
+      "oscillator": 10.38,
+      "arrow": null,
+      "liquidity": -1.14,
+      "barTime": "2026-11-18 UTC",
+      "result": {
+        "index": 20,
+        "long": 20,
+        "short": 5,
+        "bias": "long",
+        "direction": "wait",
+        "tier": "none",
+        "tierLabel": "无信号",
+        "signals": {
+          "oscillator": {
+            "side": "long",
+            "points": 20,
+            "label": "超卖"
+          },
+          "divergence": {
+            "side": null,
+            "points": 0,
+            "label": "无箭头",
+            "active": false
+          },
+          "liquidity": {
+            "side": "short",
+            "points": 5,
+            "penalty": 0,
+            "label": "卖方弱",
+            "strength": "weak",
+            "available": true
+          }
+        },
+        "capped": false
+      },
+      "reason": "超卖 10.38，流动性 -1.14（卖方弱）"
     },
     {
       "symbol": "CL",
       "name": "WTI Crude Oil",
       "market": "HYPERLIQUID_HIP3 CL-USDC",
       "assetClass": "commodity",
-      "price": 87.048,
-      "oscillator": 28.57,
+      "price": 83.737,
+      "oscillator": 22.08,
       "arrow": null,
-      "liquidity": -7.06,
-      "barTime": "2026-11-16 UTC",
+      "liquidity": 4.17,
+      "barTime": "2026-11-18 UTC",
       "result": {
         "index": 5,
-        "long": 0,
-        "short": 5,
-        "bias": "short",
+        "long": 5,
+        "short": 0,
+        "bias": "long",
         "direction": "wait",
         "tier": "none",
         "tierLabel": "无信号",
@@ -984,28 +739,154 @@
             "active": false
           },
           "liquidity": {
-            "side": "short",
+            "side": "long",
             "points": 5,
             "penalty": 0,
-            "label": "卖方弱",
+            "label": "买方弱",
             "strength": "weak",
             "available": true
           }
         },
         "capped": false
       },
-      "reason": "流动性 -7.06（卖方弱）"
+      "reason": "流动性 +4.17（买方弱）"
     },
     {
       "symbol": "GOOGL",
       "name": "Alphabet Inc.",
       "market": "NASDAQ GOOGL",
       "assetClass": "stock",
-      "price": 295.77,
-      "oscillator": 47.08,
+      "price": 280.2,
+      "oscillator": 39.79,
       "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-13 US close (delayed 15m)",
+      "barTime": "2026-11-17 US close (delayed 15m)",
+      "result": {
+        "index": 0,
+        "long": 0,
+        "short": 0,
+        "bias": "neutral",
+        "direction": "wait",
+        "tier": "none",
+        "tierLabel": "无信号",
+        "signals": {
+          "oscillator": {
+            "side": null,
+            "points": 0,
+            "label": "中性"
+          },
+          "divergence": {
+            "side": null,
+            "points": 0,
+            "label": "无箭头",
+            "active": false
+          },
+          "liquidity": {
+            "side": null,
+            "points": 0,
+            "penalty": 0,
+            "label": "无此指标",
+            "available": false
+          }
+        },
+        "capped": true
+      },
+      "reason": "三项信号都没有触发，缺少流动性确认"
+    },
+    {
+      "symbol": "INTC",
+      "name": "Intel Corporation",
+      "market": "NASDAQ INTC",
+      "assetClass": "stock",
+      "price": 55.17,
+      "oscillator": 28.59,
+      "arrow": null,
+      "liquidity": null,
+      "barTime": "2026-11-17 US close (delayed 15m)",
+      "result": {
+        "index": 0,
+        "long": 0,
+        "short": 0,
+        "bias": "neutral",
+        "direction": "wait",
+        "tier": "none",
+        "tierLabel": "无信号",
+        "signals": {
+          "oscillator": {
+            "side": null,
+            "points": 0,
+            "label": "中性"
+          },
+          "divergence": {
+            "side": null,
+            "points": 0,
+            "label": "无箭头",
+            "active": false
+          },
+          "liquidity": {
+            "side": null,
+            "points": 0,
+            "penalty": 0,
+            "label": "无此指标",
+            "available": false
+          }
+        },
+        "capped": true
+      },
+      "reason": "三项信号都没有触发，缺少流动性确认"
+    },
+    {
+      "symbol": "MU",
+      "name": "Micron",
+      "market": "NASDAQ MU",
+      "assetClass": "stock",
+      "price": 712.42,
+      "oscillator": 40.85,
+      "arrow": null,
+      "liquidity": null,
+      "barTime": "2026-11-17 US close (delayed 15m)",
+      "result": {
+        "index": 0,
+        "long": 0,
+        "short": 0,
+        "bias": "neutral",
+        "direction": "wait",
+        "tier": "none",
+        "tierLabel": "无信号",
+        "signals": {
+          "oscillator": {
+            "side": null,
+            "points": 0,
+            "label": "中性"
+          },
+          "divergence": {
+            "side": null,
+            "points": 0,
+            "label": "无箭头",
+            "active": false
+          },
+          "liquidity": {
+            "side": null,
+            "points": 0,
+            "penalty": 0,
+            "label": "无此指标",
+            "available": false
+          }
+        },
+        "capped": true
+      },
+      "reason": "三项信号都没有触发，缺少流动性确认"
+    },
+    {
+      "symbol": "QQQ",
+      "name": "Invesco QQQ Trust",
+      "market": "NASDAQ QQQ",
+      "assetClass": "stock",
+      "price": 656.95,
+      "oscillator": 38.81,
+      "arrow": null,
+      "liquidity": null,
+      "barTime": "2026-11-17 US close (delayed 15m)",
       "result": {
         "index": 0,
         "long": 0,
@@ -1043,11 +924,11 @@
       "name": "SK hynix ADR",
       "market": "NASDAQ SKHY",
       "assetClass": "stock",
-      "price": 131.79,
-      "oscillator": 42.06,
+      "price": 122.61,
+      "oscillator": 34.4,
       "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-13 US close (delayed 15m)",
+      "barTime": "2026-11-17 US close (delayed 15m)",
       "result": {
         "index": 0,
         "long": 0,
@@ -1081,15 +962,57 @@
       "reason": "三项信号都没有触发，缺少流动性确认"
     },
     {
-      "symbol": "XAG/USD",
-      "name": "Silver Spot",
-      "market": "FX_OTC XAG/USD",
-      "assetClass": "commodity",
-      "price": 47.5006,
-      "oscillator": 26.3,
+      "symbol": "SNDK",
+      "name": "Sandisk",
+      "market": "NASDAQ SNDK",
+      "assetClass": "stock",
+      "price": 797.24,
+      "oscillator": 27.41,
       "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-16 UTC",
+      "barTime": "2026-11-17 US close (delayed 15m)",
+      "result": {
+        "index": 0,
+        "long": 0,
+        "short": 0,
+        "bias": "neutral",
+        "direction": "wait",
+        "tier": "none",
+        "tierLabel": "无信号",
+        "signals": {
+          "oscillator": {
+            "side": null,
+            "points": 0,
+            "label": "中性"
+          },
+          "divergence": {
+            "side": null,
+            "points": 0,
+            "label": "无箭头",
+            "active": false
+          },
+          "liquidity": {
+            "side": null,
+            "points": 0,
+            "penalty": 0,
+            "label": "无此指标",
+            "available": false
+          }
+        },
+        "capped": true
+      },
+      "reason": "三项信号都没有触发，缺少流动性确认"
+    },
+    {
+      "symbol": "SOXL",
+      "name": "Direxion Daily Semiconductor Bull 3X",
+      "market": "NYSE ARCA SOXL",
+      "assetClass": "stock",
+      "price": 49.07,
+      "oscillator": 35.25,
+      "arrow": null,
+      "liquidity": null,
+      "barTime": "2026-11-17 US close (delayed 15m)",
       "result": {
         "index": 0,
         "long": 0,
@@ -1127,11 +1050,53 @@
       "name": "Gold Spot",
       "market": "FX_OTC XAU/USD",
       "assetClass": "commodity",
-      "price": 3871.82,
-      "oscillator": 31.31,
+      "price": 3784.43,
+      "oscillator": 23.68,
       "arrow": null,
       "liquidity": null,
-      "barTime": "2026-11-16 UTC",
+      "barTime": "2026-11-18 UTC",
+      "result": {
+        "index": 0,
+        "long": 0,
+        "short": 0,
+        "bias": "neutral",
+        "direction": "wait",
+        "tier": "none",
+        "tierLabel": "无信号",
+        "signals": {
+          "oscillator": {
+            "side": null,
+            "points": 0,
+            "label": "中性"
+          },
+          "divergence": {
+            "side": null,
+            "points": 0,
+            "label": "无箭头",
+            "active": false
+          },
+          "liquidity": {
+            "side": null,
+            "points": 0,
+            "penalty": 0,
+            "label": "无此指标",
+            "available": false
+          }
+        },
+        "capped": true
+      },
+      "reason": "三项信号都没有触发，缺少流动性确认"
+    },
+    {
+      "symbol": "ZEC",
+      "name": "Zcash",
+      "market": "BINANCE.F ZECUSDT",
+      "assetClass": "crypto",
+      "price": 951.89,
+      "oscillator": 24.31,
+      "arrow": null,
+      "liquidity": null,
+      "barTime": "2026-11-18 UTC",
       "result": {
         "index": 0,
         "long": 0,
@@ -1168,48 +1133,22 @@
   "weeklyPerformance": {
     "threshold": 60,
     "days": 7,
-    "windowStart": "2026-11-09",
-    "windowEnd": "2026-11-15",
-    "currentDate": "2026-11-16",
+    "windowStart": "2026-11-11",
+    "windowEnd": "2026-11-17",
+    "currentDate": "2026-11-18",
     "records": [
       {
-        "symbol": "INTC",
-        "name": "Intel Corporation",
+        "symbol": "SUI",
+        "name": "Sui",
         "direction": "long",
-        "signalDate": "2026-11-10",
+        "signalDate": "2026-11-16",
         "signalIndex": 73,
-        "signalPrice": 59.37,
-        "currentDate": "2026-11-16",
-        "currentPrice": 59.66,
-        "priceChangePct": 0.48846218628937343,
-        "directionalReturnPct": 0.48846218628937343,
-        "elapsedDays": 6
-      },
-      {
-        "symbol": "MU",
-        "name": "Micron",
-        "direction": "long",
-        "signalDate": "2026-11-10",
-        "signalIndex": 73,
-        "signalPrice": 733.33,
-        "currentDate": "2026-11-16",
-        "currentPrice": 778.31,
-        "priceChangePct": 6.133664243928361,
-        "directionalReturnPct": 6.133664243928361,
-        "elapsedDays": 6
-      },
-      {
-        "symbol": "SNDK",
-        "name": "Sandisk",
-        "direction": "long",
-        "signalDate": "2026-11-09",
-        "signalIndex": 73,
-        "signalPrice": 835.06,
-        "currentDate": "2026-11-16",
-        "currentPrice": 885.01,
-        "priceChangePct": 5.981606112135651,
-        "directionalReturnPct": 5.981606112135651,
-        "elapsedDays": 7
+        "signalPrice": 0.7276,
+        "currentDate": "2026-11-18",
+        "currentPrice": 0.7288,
+        "priceChangePct": 0.16492578339746267,
+        "directionalReturnPct": 0.16492578339746267,
+        "elapsedDays": 2
       }
     ]
   }
